@@ -1,0 +1,136 @@
+/* 공통 */
+* {padding:0; margin:0;}
+ul, li {list-style: none;}
+img {max-width:100%; height:auto;}
+
+
+header {border-top:3px solid green}
+header .wrap {border-bottom: 1px solid #777;}
+header .wrap .top {width:1008px; margin: 0 auto; overflow:hidden;}
+.wrap .top .top_left{float:left; line-height: 38px;}
+.wrap .top .top_right{float:right;}
+.wrap .top .top_right li {display: inline;}
+.wrap .top .top_right li a {
+    display: inline-block;
+    color: #666666;
+    font-size: 12px;
+    text-decoration: none;
+    padding: 11px 7px;
+}
+.top_right li span {
+    border-left: 1px solid #666666; 
+    padding-left: 11px;
+}
+
+.wrap .top .left{float:left;}
+.wrap .top .right{float:right; margin-top: 10px;}
+.wrap .top fieldset{
+    margin: 36px 0 0 11px;
+    border: none;
+    background-image: url(img_melon/melon_search.png);
+    width: 323px;
+    height:40px;
+    overflow: hidden;
+}
+.wrap .top fieldset input{
+    float: left;
+    border:none;
+    margin:7px 0 0 18px;
+    width:260px;
+    height: 25px;
+}
+.wrap .top fieldset button{
+    float: right;
+    height:40px;
+    width:45px;
+    border:none;
+    margin:0;
+    background-image: url(img_melon/melon_btn.png);
+    background-color: #fff;
+    cursor: pointer;    /* 마우스커서 손가락 */
+}
+
+.top .gnb_left{float:left;}
+.top .gnb_right{float:right;}
+.top .gnb_left li {display:inline;}
+.top .gnb_left li a, 
+.top .gnb_right li a {
+    display:inline-block;
+    color: black;
+    text-decoration: none;
+    font-weight: 900;
+    /* width || height || padding으로 사이즈 주기 */
+    padding:10px 15px;
+}
+.top .gnb_left li a:hover, 
+.top .gnb_right li a:hover{
+    color:darkgreen;
+} 
+
+/* content 영역 */
+section .wrap {width:1008px; margin: 0 auto;}
+section .cont {overflow:hidden;}
+section .cont .list {float: left; width:480px;}
+section .cont .slide {float: left; width:236px; margin-left:4px;}
+section .cont .login {float: left; width:280px; margin-left: 8px;}
+
+.list ul {overflow: hidden;}
+.list ul li {float:left; width:33.3333%; box-sizing: border-box;}
+
+.list ul li a {position:relative; display: inline-block;}/* a 컨텐츠가 이미지 사이즈에 맞게 채워짐 */
+.list ul li a .singer {
+    position:absolute; 
+    bottom:3px; 
+    left:0;
+    width:100%;
+    height: 22px;
+    background-color: #000;
+    opacity:0.85;    /* 투명도 */
+    text-align: center;
+    color:#fff;
+    font-weight: 700;
+}
+
+/* 호버컨텐츠 */
+.list ul li{position: relative;}
+.list ul li .hover_cont{
+    position:absolute;
+    top:0;
+    left:0;
+    width:156px;    /* 이미지 크기에 맞춤 */
+    height:156px;
+    background-color: rgba(0,0,0,.8);
+    line-height: 155px; /* 글씨 수직 */
+    text-align: center;
+    opacity: 0; /* 투명도 0에서 마우스 대면 1로 */
+    transition: opacity 0.25s ease-in-out;/* 애니메이션 효과 !! */
+}
+.list ul li .hover_cont a {
+    color:#fff;
+    font-weight: 600;
+    text-decoration: none;
+}
+.list ul li:hover > .hover_cont { /* li 호버시 li하위의 클래스 속성 변경 */
+    opacity:1;
+}   
+
+/* 로그인영역 */
+.login .user {
+    border: 1px solid #999; 
+    background-color: #FBFBFB;
+    padding: 0 17px;
+    height:115px;
+}
+.login .user .inner {overflow:hidden; padding-top: 23px;}
+.login .user .left {float:left; color:#939393; font-size:11px;}
+.login .user .right {float:right; color:#939393; font-size:11px;}
+
+.login .promotion {border: 1px solid #999999; margin-top: 10px;}
+.login .user .button {
+    background-color: #00d344; 
+    width:100%;
+    height:42px; 
+    border:none; 
+    margin-top:10px;
+    color:#fff;
+}

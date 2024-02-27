@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        function func1(){
+            console.log("함수1 실행");  //선언적함수
+        }
+
+        
+        //이 자리에서 a 호출 안됨
+        var a = function(){
+            console.log("함수a 실행");
+        }
+
+        a();
+
+        //매개변수 1개를 전달받아서 홀짝 판별하는 익명함수
+        var judge = function(i){
+            if(i%2==0){
+                return "짝수";
+            }else return "홀수";
+        }
+        //매개변수 3개를 전달받아서 평균 리턴하는 익명함수
+        var average = function(i, j, k){
+            return (i+j+k)/3;
+        }
+
+        console.log("홀짝:",judge(31),"평균:",average(30,50,70));
+
+        
+    </script>
+</body>
+</html>

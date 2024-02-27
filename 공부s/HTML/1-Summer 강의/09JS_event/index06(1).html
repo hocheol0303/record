@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>속성을 곧바로 변경하기</h1>
+    <select id="season">
+        <option value="1.jpg">봄</option>
+        <option value="2.jpg">여름</option>
+        <option value="3.jpg">가을</option>
+        <option value="4.jpg">겨울</option>
+    </select>
+    <img src="img/1.jpg" alt="계절" width="300px" id="img">
+
+    <script>
+        var season = document.getElementById("season");
+        season.onchange = function(){
+            document.getElementById("img").src = "img/" + season.value;
+        }
+    </script>
+</body>
+</html>

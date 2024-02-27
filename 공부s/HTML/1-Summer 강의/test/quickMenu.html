@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="jquery/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="css/quickMenu.css">
+</head>
+
+<body>
+  <div class="scroll">
+      <div class="body">
+          <div class="text">
+            <div class="goToTop"><img src="/00img/giphy.gif"></a></div>
+          </div>
+      </div>
+  </div>
+
+  <script>
+    
+/* $(window).bind('wheel', function(event){
+    if (event.originalEvent.wheelDelta > 0 || event.originalEvent.detail < 0) {
+        // scroll up
+        $(".goToTop").css("top", window.scrollY+200);
+    }
+    else {
+        // scroll down
+        console.log("스크롤 아래로");
+        $(".goToTop").css("top",window.scrollY+250);
+    }
+}); */
+
+$(document).ready(function(){
+  var currentPosition = parseInt($(".goToTop").css("top"));
+  $(window).scroll(function() {
+    var position = $(window).scrollTop(); 
+    $(".goToTop").stop().animate({"top":position+currentPosition+"px"},500);
+    console.log(currentPosition);
+  });
+});
+
+//출처: https://hongpage.kr/40 [홍페이지 HONGPAGE:티스토리]
+  </script>
+    
+
+</body>
+</html>

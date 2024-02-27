@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src='js/jquery-3.6.0.min.js'></script>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+        <ul class="wrap"><!-- overflow, border -->
+            <li class="box"><!-- float -->
+                <div class="cont" id="0"><!-- border -->
+                    <div id="0">수학</div>
+                </div>
+            </li>
+            <li class="box"><!-- float -->
+                <div class="cont" id="1"><!-- border -->
+                    <div>CS</div>
+                </div>
+            </li>
+            <li class="box"><!-- float -->
+                <div class="cont" id="2"><!-- border -->
+                    <div>프로그래밍 언어</div>
+                </div>
+            </li>
+            <li class="box"><!-- float -->
+                <div class="cont" id="3"><!-- border -->
+                    <div>알고리즘</div>
+                </div>
+            </li>
+        </ul>
+
+        <script>
+             $(document).ready(function () {
+                    $(".cont").on("click", function () {
+                        // 클릭된 div의 인덱스를 가져옴
+                        var id = $(this).attr("id");
+
+                        var newPageURL;
+                        if (id === "0") {
+                            newPageURL = "./calculus.html";
+                        } else if (id === "1") {
+                            newPageURL = "./dataStructure.html";
+                        } else if (id === "2") {
+                            newPageURL = "./engineeringMath.html";
+                        } else if (id === "3") {
+                            newPageURL = "./algorithm.html";
+                        } else {
+                            // 예외
+                            alert("오류 발생.");
+                            return;
+                        }
+
+                        // 새로운 웹 문서로 이동
+                        window.location.href = newPageURL;
+                    });
+                });
+        </script>
+    <footer>Created By 컴퓨터공학과 오후반 20220848 양호철</footer>
+</body>
+
+</html>

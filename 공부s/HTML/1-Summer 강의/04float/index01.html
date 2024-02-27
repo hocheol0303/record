@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box, .box div {
+            border:1px solid #777;
+        }
+
+        .box div {
+            float: left;
+            width: 25%;
+            box-sizing: border-box;
+        }
+            /* float을 적용하면 부모가 자식컨텐츠를 감싸지 못하는 문제가 있습니다.
+                플롯의 법칙을 적용해서 문제를 해결해야합니다. */
+        /* .box:after {content:""; display: block; clear: both;} */
+
+        .box {
+            overflow: hidden;
+            width: 500px;
+            
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box">
+        <div>박스</div>
+        <div>박스</div>
+        <div>박스</div>
+        <div>박스</div>
+    </div>
+
+
+    <style>
+        /* 부모너비는 500px 가운데 박스 정렬 */
+        /* li - 3등분 */
+        ul {
+            width: 500px; 
+            overflow: hidden; 
+            margin: 0 auto;
+            padding: 0;
+            }
+        li, ul {list-style: none;}
+        ul, ul li{border: 1px solid #777;}
+        ul li{
+            width: 33.3333%;
+            box-sizing: border-box;
+            float: left;
+        }
+    </style>
+
+    
+        <ul>
+            <li>3등분</li>
+            <li>3등분</li>
+            <li>3등분</li>
+        </ul>
+    
+
+</body>
+</html>

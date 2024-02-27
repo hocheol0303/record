@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Emp 정보 (테이블모형)</h1>
+    <form>
+        <table border="1">
+            <tr>
+                <td>사원번호: </td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>이름:</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+            <td>성별:</td>   
+            <td>
+                <input type="radio" name="gender">남자
+                <input type="radio" name="gender">여자
+            </td>
+
+            </tr>
+            <tr>
+                <td>직업:</td> 
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>상사:</td> 
+                <td>
+                    <select name="sangSa">
+                        <option value="">1234</option>
+                        <option value="">5321</option>
+                        <option value="">6432</option>
+                        <option value="">2548</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>입사일: </td>
+                <td><input type="text" placeholder="2012-01-01"></td>
+            </tr>
+            <tr>
+                <td>부서번호</td>
+                <td>
+                    <select name="depNo">
+                        <option value="A01">A01</option>
+                        <option value="A02">A02</option>
+                    <option value="A03">A03</option>
+                    <option value="A04">A04</option>
+                    <option value="A05">A05</option>
+                </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" value="저장"> 
+                    <input type="reset" value="취소">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

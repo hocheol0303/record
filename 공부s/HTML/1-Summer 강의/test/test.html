@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>현재상영영화</title>
+    <script src='jquery/jquery-3.6.0.min.js'></script>
+
+    <link rel="stylesheet" href="css/test.css">
+
+</head>
+
+<body>
+  
+    
+
+    <div>
+           <!-- //구글링 -->
+        <div class="head">
+            <div class="search"><input style="line-height:20px" type="text" placeholder="구글구글"><button class="search"
+                    style="line-height:20px">검색</button></div>
+        </div> 
+   
+        <div id="body">
+            <div id="bodyBody">
+                <div id="bodyHead">
+                    <div id="movie">
+                        <h1>현재상영영화</h1>
+                    </div>
+                </div>
+
+                <script>
+                  $(document).ready(function(){
+
+                    $(".movie>li>div>img").mouseenter(function(){
+                      $(this).closest("div").find("div").css("color",'red');
+                    })
+
+                    $(".movie>li>div>img").mouseleave(function(){
+                      $(this).closest("div").find("div").css('color','black');
+                    })
+
+                  })
+                </script>
+
+                <div id="bodyBottom">
+                    <ul class="movie">
+                        <!-- 탑건 -->
+                        <li><!-- 그림 -->
+                            <div style="margin-right:20px">
+                                <div class="ii">
+                                    <p class="jj">
+                                        하위하윙
+                                    </p>
+                                    <img src="img/1.jpg" alt="포스터" width="100" height="140">
+                                </div>
+                            </div>
+                            <div>
+                                <div><img src="img/12세.png"><a href="../project/topgun.html" style="font-family: tahoma;">탑건: 매버릭</a></div>
+                                <div class="base">
+                                    <p>평점</p>
+                                    <div class="starBase">
+                                        <p class="star" id="star1"></p><!-- 별점그림 -->
+                                    </div>
+                                    <p class="evalue" style="font-size:25px; font-weight:bolder;">9.73</p>
+                                </div>
+                                <div class="gaeYo">개요 <p>2022.06.22</p>
+                                    <p>130분</p>
+                                </div>
+                                <div><!-- 인물 검색 -->
+                                    <div>
+                                        <p class="cc">감독</p><a class="character" href="#">조셉 코신스키</a>
+                                    </div>
+                                    <div>
+                                        <p class="cc">출연</p><a class="character" href="#">톰 크루즈</a>, <a
+                                            class="character" href="#">마일즈 텔러</a>, <a class="character" href="#">제니퍼 코넬리</a>
+                                    </div>
+                                </div>
+                                <div class="btns">
+                                    <div><a href="#" class="btn1 btn" style="width:77px; height: 26px;"></a></div>
+                                    <div class="extra">
+                                        <a href="#" class="btn2 btn" style="width:74px; height: 24px;"></a>
+                                        <a href="#" class="btn3 btn" style="width:75px; height: 24px;"></a>
+                                        <a href="#" class="btn4 btn" style="width:75px; height: 24px;"></a>
+                                        <a href="#" class="btn5 btn" style="width:75px; height: 24px;"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+            <div id="goToTop">
+                <a href="#"><img src="img/top.png" width="50" height="50" alt="위로"></a>
+            </div>
+
+        </div>
+    </div>
+        
+
+
+
+        <script>
+
+                    /* 스크롤 쫓아가기 */
+                $(document).ready(function(){
+                var currentPosition = parseInt($("#goToTop").css("top"));
+                $(window).scroll(function() {
+                    var position = $(window).scrollTop(); 
+                    $("#goToTop").stop().animate({"top":position+currentPosition+"px"},300);
+                });
+                });
+
+
+                $("#goToTop > a").click(function () {
+                    window.scrollTo(0, 0);
+                })
+                /* html값으로 검색하는 함수 */
+            $(".character").click(function () {
+                event.preventDefault();
+                location.href = "https://www.google.com/search?q=" + $(this).html()
+            });
+
+            $(".search>button").click(function () {
+                event.preventDefault();
+                location.href = "https://www.google.com/search?q=" + $(".search > input").val();
+                $(".search>input").val("");
+            });
+        </script>
+         <script>
+        
+            
+    
+            
+        </script>
+</body>
+
+</html>

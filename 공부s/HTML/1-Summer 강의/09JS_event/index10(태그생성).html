@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="inner1"></div>
+
+    <ul id="inner2">
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+    <div id="inner3"></div>
+
+    
+    
+    <button id="btn1">버튼1</button>
+    <button id="btn2">버튼2</button>
+    <button id="btn3">버튼3</button>
+
+    
+    <script>
+
+        var inner1= document.getElementById("inner1");
+        document.getElementById("btn1").onclick = function(){
+            console.log("btn1");
+            inner1.innerHTML = "<b>넣을 수 있다.</b>"
+        }
+        
+        var inner2= document.querySelectorAll("#inner2 > li");
+        document.getElementById("btn2").onclick = function(){
+            console.log(inner2);
+            inner2.forEach(function(a, b){
+                console.log(a,b);
+                a.innerHTML = "a = "+a +", b = "+ b +"이렇게 값을 넣는다!";
+            })
+        }
+        
+        var inner3= document.getElementById("inner3");
+        document.getElementById("btn3").onclick = function(){
+            var str='';     //공백문자열
+            for(var i=1; i<=10; i++){
+                str += "<input type='checkbox' name='intro'>" + i;      //str에 저장
+            }
+            inner3.innerHTML = str;     //출력
+        } 
+    </script>
+
+</body>
+</html>

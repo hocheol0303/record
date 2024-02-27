@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        (function(x,y){
+        console.log(x, y, "즉시실행함수");
+        test01();
+        test02();
+        })(1,2);       //즉시실행함수 !! constructor처럼 사용
+
+        //페이지 시작할 때 필요한 함수구문을 순서대로 호출 시.
+
+        function test01(){
+            console.log("test01");
+        }
+        function test02(){
+            console.log("test02");
+        }
+
+
+        var a=1;
+        var a="fjdskal";    //가능은 하다 마지막에 선언된 거 저장
+        
+        for(var i=1; i<=10; i++){
+
+        }
+        console.log(i);
+        var i=true;
+        console.log(i);
+
+        
+    </script>
+
+
+
+</body>
+</html>

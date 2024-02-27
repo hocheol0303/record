@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {margin: 0; padding: 0;}
+
+        .list {width:500px; margin: 0 auto; border: 1px solid #777;}
+        p {border: 1px solid #777; height: 100px;}
+
+        .content {position: relative;}
+
+        .inner1{background-color: red;}
+        .inner2{
+            background-color: blue;
+            /* 
+             포지션 absolute는 부모의 relative 기반으로 z축으로 올라갑니다.
+             없다면 body 기준으로 올라갑니다. 
+             
+             법칙: position absolute로 올리면 부모에 relative를 줍니다.
+             top, bottom 중 택1, left, right 중 택1해서 위치를 조정합니다.
+            */
+            position: absolute;         /* z방향으로 올라옴 */
+            top: 10px;
+            left: 10px;
+        }
+        .inner3{background-color: yellow;}
+
+    </style>
+</head>
+<body>
+    
+    <div class="list">
+        <div class="content">
+            <p class="inner1">포지션</p>
+            <p class="inner2">포지션</p>
+            <p class="inner3">포지션</p>
+        </div>
+    </div>
+
+</body>
+</html>

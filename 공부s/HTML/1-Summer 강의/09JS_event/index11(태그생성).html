@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" class="todo" placeholder="할 일 적으세여">           <!-- 적은 값 = value -->
+    <button type="button" id="add">할 일 추가하기</button>
+    
+    <button type="button" id="remove">삭제하기</button>
+    <ul class="list">
+        <!-- 목록을 넣을 공간 -->
+    </ul>
+
+
+    <script>
+
+        /* var add = document.getElementById("add"); */
+        var todo = document.querySelector(".todo");
+        document.getElementById("add").onclick = function(){    //li a text 태그 만들기
+            var li= document.createElement("li");   //li태그 생성
+            var a= document.createElement("a");     //a태그 생성
+            a.href = "https://www.naver.com";
+            a.target = "_blank";
+            a.style.color="aqua";
+            
+            var text = document.querySelector(".todo").value;   //사용자가 작성한 input값
+            
+            console.log(li);
+            console.log(a);
+            console.log(text);              
+            
+                    //조립은 역순 조립은 역순
+            a.innerHTML=text;       //a 사잇값으로 text추가
+            li.appendChild(a);      //li 자식으로 a 추가
+            document.querySelector(".list").appendChild(li);     //ul 자식으로 li 추가
+
+            todo.value = "" ;   //input태그의 값 초기화
+        }
+        
+        document.getElementById("remove").onclick = function(){
+            //자식 지우기
+            //부모태그.removeChild(대상태그);
+            
+            var list= document.querySelector(".list");
+            console.dir(list);
+            // list.remove();
+            // list.removeChild(list.children[0]);     //첫 번째꺼 
+            list.removeChild(list.children[list.children.length-1]);   //마지막꺼
+        }
+
+    </script>
+
+</body>
+</html>

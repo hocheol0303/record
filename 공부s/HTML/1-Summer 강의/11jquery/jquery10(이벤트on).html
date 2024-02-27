@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <!-- jquery 링크 -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+
+</head>
+<body>
+    <ul class="list">
+
+    </ul>
+
+    <script>
+        
+        window.setTimeout(function(){
+            $(".list").html("<li class='box'>나는야퉁퉁이</li>");
+        }, 3000)    //3초 뒤 실행
+        
+
+        //.box에 이벤트 (안걸림)
+        // $(".box").click(function(){
+        //     console.log("실행 안됨......");
+        // })
+
+        //on방식의 이벤트
+        $(".list").on("click", "li" , function(){
+            console.log(1);
+            $(".list").html("<li class='box'>너도너도퉁퉁이</li>");
+        })
+
+        //개중요 매우중요 킹갓중요 정말중요 모르면 바보: ★★★★★★★★★★★★★$(document).ready(function(){});★★★★★★★★★★★★★
+        //js의 window.onload = function()과 같음 js꺼보다 좋음 많이 쓸 수 있음
+    </script>
+</body>
+</html>

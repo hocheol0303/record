@@ -1,0 +1,3 @@
+﻿  tmp.c
+C:\Users\hoche\OneDrive\Desktop\핵교\2-1\자료구조\Project1\Project5\tmp.c(9,3): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  Project5.vcxproj -> C:\Users\hoche\OneDrive\Desktop\핵교\2-1\자료구조\Project1\x64\Debug\Project5.exe

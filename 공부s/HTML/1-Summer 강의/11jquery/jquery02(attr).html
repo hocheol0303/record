@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- jquery 링크 -->
+    <script src="jquery-3.6.0.min.js"></script>
+</head>
+<body>
+     <!-- input태그를 읽기만 허용 -->
+    <input type="text" id="test01" readonly="readonly">
+
+    <img src="#" alt="이미지" class="test02">
+    
+    <img src="#" alt="이미지" width="" height="" class="test03">
+
+    <script>
+        //js
+        var test01= document.getElementById("test01");
+
+        //jquery
+        var a= $("#test01").attr("id");
+        console.log(a);
+        var b= $("#test01").attr("readonly");
+        console.log(b);
+
+        //속성값 변경
+        $(".test02").attr("src", "/00img/3.gif");
+        
+        //속성값 많이 변경  {key: value}
+        $(".test03").attr({
+            src:"/00img/2.jpg",
+            width:"300",
+            height:"300",
+            alt:"빠밤"
+        })
+        </script>    
+</body>
+</html>

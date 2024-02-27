@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>니 얼굴</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="comment.css">
+</head>
+
+<body>
+    <div>
+        <div class="top">
+            <div class="topTop">
+                <ul>
+                    <li class="topTopChild"><a href="#"><img src="img/bgimg.png" height="50" width="50"></a></li>
+                    <li class="topTopChild text"><a href="#">뉴스</a></li>
+                    <li class="topTopChild text"><a href="#">연예</a></li>
+                    <li class="topTopChild text"><a href="#">스포츠</a></li>
+                    <li class="topTopChild text"><a href="#">자동차</a></li>
+
+                    <li class="menu"><a href="#"><img src="img/giphy.gif" width="50"></a></li>
+                    <li class="hidden search"><input placeholder='구글링' type="text"><button type="button">검색</button>
+                    </li>
+                    <li class="login"><a href="#">로그인</a></li>
+                </ul>
+            </div>
+            <div class="topBot">
+                <div class="topBotCont">
+                    <ul class="parent">
+                        <li class="child"><a href="../12프로젝트/합친거.html">홈</a></li>
+                        <li class="child"><a href="#">랭킹</a></li>
+                        <li class="child"><a href="home.html">상영/예정작</a></li>
+                        <li class="child"><a href="#">콘텐츠</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="middle">
+            <div class="middleTop" style="overflow:hidden;">
+                <div style="float:left;"><img src="img/5.jpg"></div>
+                <div style="float:left;">
+                    <table>
+                        <tr class="krt">
+                            <th colspan="4" align="left">니 얼굴</th>
+                        </tr>
+                        <tr class="engt">
+                            <th colspan="4" align="left">Please Make Me Look Pretty, 2020</th>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <td class="title">개봉</td>
+                            <td class="tbCont">2022.06.23</td>
+                            <td class="title">평점</td>
+                            <td class="tbCont">9.45</td>
+                        </tr>
+                        <tr>
+                            <td class="title">장르</td>
+                            <td class="tbCont">다큐멘터리</td>
+                            <td class="title">누적관객</td>
+                            <td class="tbCont">12,899명</td>
+                        </tr>
+                        <tr>
+                            <td class="title">국가</td>
+                            <td class="tbCont">한국</td>
+                            <td class="title">박스오피스</td>
+                            <td class="tbCont">33위</td>
+                        </tr>
+                        <tr>
+                            <td class="title">등급</td>
+                            <td class="tbCont">전체관람가</td>
+                        </tr>
+                        <tr>
+                            <td class="title">러닝타임</td>
+                            <td class="tbCont">86분</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="tap">
+                <a href="#">###</a>
+                <a href="#">###</a>
+                <a href="#">###</a>
+                <a href="#">평점</a>
+            </div>
+            <div class="botBot">
+                <div class="botRight">
+                    <img src="img/co.jpg" alt="banner">
+                </div>
+
+                <div class="botLeft">
+                    <h1 style="margin-bottom:20px">네티즌 평점 9.45점</h1>
+                    <textarea class="comment" rows="10" placeholder="댓글 입력"></textarea>
+                    <button type="button" class="commit">댓글 등록</button>
+                    <ul class="list">
+                        <!-- 댓글댓글 -->
+                        <li class="commentCss">얼굴얼굴</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="gap"></div>
+
+    <script>
+        $(".bottom>.tap>a").mouseenter(function () {
+            $(this).addClass("on");
+        });
+        $(".bottom>.tap>a").mouseout(function () {
+            $(this).removeClass("on");
+        });
+        $('.commit').click(function () {
+            var li = document.createElement("li");
+            li.innerHTML = $(".comment").val();
+            li.classList.add("commentCss");
+            document.querySelector(".list").appendChild(li);
+            $(".comment").val("");
+            /* commentCss 클래스 포함 */
+        });
+
+        $(".menu").click(function () {
+            $(".search").toggleClass("hidden");
+        });
+        $(".search>button").click(function () {
+            event.preventDefault();
+            location.href = "https://www.google.com/search?q=" + $(".search > input").val();
+            $(".search>input").val("");
+        });
+
+    </script>
+</body>
+
+</html>

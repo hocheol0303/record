@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select class="box">
+        <option value="1.jpg">봄</option>
+        <option value="2.jpg">여름</option>
+        <option value="3.jpg">가을</option>
+        <option value="4.jpg">겨울</option>
+        <option value="giphy.gif">스폰지밥</option>
+    </select>
+    <img class="img" src="img/1.jpg" alt="이미지" width="400" style="border: 10px solid black;">
+
+    <script>
+        //document.getElementById("아이디명만")     //css선택자처럼 아님
+        var box = document.querySelector(".box");
+        box.onchange = function(){
+            document.querySelector(".img").src="img/" + box.value ;
+        }
+        
+    </script>
+
+
+<hr>
+
+
+
+<h3 class="title">단어를 선택하세요</h3>
+<select class="sel">
+    <option value="1">선택</option>
+    <option value="2">한국어</option>
+    <option value="3">영어</option>
+</select>
+
+<script>
+    var sel = document.querySelector(".sel");
+    sel.onchange = function(){
+        
+        var x= sel.value; //select 태그의 값
+        if(x == "1"){
+            document.querySelector(".title").innerHTML="단어를 선택하세요";     //Selector = 선택자 -> 클래스명 " . " 빼먹지 않기 !!
+        }else if(x=="2"){
+            document.querySelector(".title").innerHTML="한국어입니다.";
+        }else if (x=="3"){
+            document.querySelector(".title").innerHTML="영어입니다.";
+        }
+
+    }
+</script>
+</body>
+</html>

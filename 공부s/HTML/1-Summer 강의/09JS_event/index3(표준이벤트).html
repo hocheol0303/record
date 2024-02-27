@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="button">표준이벤트</button>
+
+    <script>
+        var btn = document.getElementById("button");
+        // btn.addEventListener('click', xxx);     //인수 = (이벤트명, 실행시킬 함수명)
+        // function xxx() {
+        //     console.log("표준이벤트");
+        // }
+
+        btn.addEventListener('click', function(){
+            console.log("표준이벤트")
+        });
+
+        btn.addEventListener('click', function(){           // ~~.addEventListener()의 특징: 같은 이벤트로 여러 함수를 부를 수 있다. 표준이벤트만 됨
+            console.log('표준표준');
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        section {overflow: hidden; width: 500px; margin: 0 auto;}
+
+        section .box{float: left; width: 25%; background-color: aqua; height:100px;}
+
+        .pos {
+            background-color: violet;
+            /* position:relative; */    /* 내 위치에서 z축으로 올린다. */
+            position: absolute;
+            top:50px;
+            left: 50px;
+        }
+    </style>
+</head>
+<body>
+    
+    <section>
+        <div class="box">박스</div>
+        <div class="box">박스</div>
+        <div class="box">박스</div>
+        <div class="box">
+            박스
+            <div class="pos">포지션</div>
+        </div>
+    </section>
+
+</body>
+</html>

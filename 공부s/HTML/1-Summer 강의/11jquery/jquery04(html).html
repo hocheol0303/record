@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- jquery 링크 -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <p class="test"></p>
+    <p class="test1"></p>
+
+    <script>
+        $(".test").html("<h1>커진당</h1>");
+        $(".test1").text("<h2>커지지 않는당</h2>");
+
+        console.log($(".test").html());
+        console.log( $(".test>h1").html());
+    </script>
+</body>
+</html>

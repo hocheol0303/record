@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .on {background-color: aqua;}
+    </style>
+</head>
+<body>
+
+    <button class="btn btn-default" id="btn">클래스 속성 제어하기</button>
+
+    <script>    //이름 확인, 추가, 제거, 리스트 확인, 토글
+        var btn= document.getElementById("btn");
+        btn.onclick = function(){
+            //class가 키워드이기때문에 className으로 class속성에 접근한다.
+            // console.log(btn.className);
+            // console.log(btn.classList);     //클래스 이름을 리스트로
+
+            //JS -> class를 제어해서 css스타일을 수정하는 작업
+                            // console.dir(btn);   //btn에서 사용할 수 있는 기능을 확인     ★★★★유용유용★★★★
+
+            // btn.classList.add("on"); //class 추가
+            // btn.classList.remove("btn-default");
+            console.log(btn.classList.contains("btn"));     //포함되었다면 true
+                        /* 
+                        if(btn.classList.contains('on')){
+                            btn.classList.remove('on');
+                        } else btn.classList.add('on');
+                        */
+            //한방에 해주는 toggle
+            
+            btn.classList.toggle("on"); //있으면 제거, 없으면 추가
+        }
+    </script>
+
+</body>
+</html>

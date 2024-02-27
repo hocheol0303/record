@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    
+    <script>            //순서 중요 순서 중요
+
+
+        //외우세욜~ 화면이 로드된 이후에 실행되는 이벤트
+            //window : JS의 Object, 단군할아버지역할
+        window.onload = function(){
+            var btn = document.getElementById("button");
+            btn.onclick = function (){
+            console.log("기본이벤트~!");
+            }
+        }
+        
+    </script>
+
+
+    <button id="button">기본 이벤트</button>   <!-- id는 고유하다. -->
+
+
+
+<!-- 
+    <script>            //순서 중요 순서 중요
+        var btn = document.getElementById("button");
+        btn.onclick = function (){
+            console.log("기본이벤트~!");
+        }
+    </script> 
+-->
+
+
+</body>
+</html>

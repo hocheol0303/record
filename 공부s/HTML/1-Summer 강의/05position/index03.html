@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {padding:0; margin:0;}
+        .box{border: 1px solid #777; position:relative; width:600px; height:300px; margin: 0 auto; overflow:hidden; padding:10px 10px 10px 150px;}
+        .image{position:absolute; top:10px; left:10px;}
+        .textbox {height:80%;}
+        .extra {float:left;}
+        .button {float:right;}
+        .textbox textarea {height: 100%; width: 100%;}
+        textarea:focus {background-color: black; color: yellow;}
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="image">
+            <img src="../02basic/img/giphy.gif" alt="" width="114px;" height="150px;">
+        </div>
+        <div class="textbox">
+            <textarea placeholder="하위하윙"></textarea>
+        </div>
+        <div class="extra">
+            <div><input type="text" class="small"></div>
+            <div><input type="text" class="small"></div>
+        </div>
+        <div class="button">
+            <button>등록하기</button></div>
+    </div>
+</body>
+</html>

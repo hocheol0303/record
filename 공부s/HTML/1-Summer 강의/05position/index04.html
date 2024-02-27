@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {padding: 0; margin: 0;}
+        ul, li {list-style: none;}
+        img {max-width: 100%; height: auto;}
+
+        header {position: fixed; left:0; top:0; width: 100%; z-index: 10;}
+            /* z-index는 z축의 높이 */
+        .logo {text-align: center; background-color: white;}
+        .gnb {background-color: black; text-align: center;}
+        
+        .menu li {display: inline;}
+        .menu li a {display: inline-block; padding: 10px 20px; color:#fff; text-decoration: none;}
+        .menu li a:hover {background-color: #777;}
+        
+
+        section {background-color: aqua; height: 1000px; margin-top:141.6px;}
+        
+        .side {position:fixed; top:200px; right:0;z-index: 20; background-color: #000;}
+        .side ul li a{
+            display: block;
+            text-decoration: none;
+            padding:10px 10px;
+            color: #777;
+            font-size: 13px;
+            border-top:1px solid #777;
+            letter-spacing: -2px;   /* 자간 */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="../04float/img/bgimg.png" alt="">
+        </div>
+        <nav class="gnb">
+            <ul class="menu">
+                <li><a href="#">목록</a></li>
+                <li><a href="#">목록</a></li>
+                <li><a href="#">목록</a></li>
+                <li><a href="#">목록</a></li>
+                <li><a href="#">목록</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <aside class="side">
+            <ul>
+                <li><a href="#">키토산</a></li>
+                <li><a href="#">키토산</a></li>
+                <li><a href="#">키토산</a></li>
+                <li><a href="#">키토산</a></li>
+            </ul>
+        </aside>
+        ........................................
+    </section>
+</body>
+</html>

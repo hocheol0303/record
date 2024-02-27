@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box1 div {display: inline;}    /* inline태그로 형변환 */
+        .box2 span {display: block;}    /* block태그로 변경 */
+        /* inline 배치를 하되 블럭의 성질(크기, 여백)을 가진다. */
+        .box3 a {
+            display: inline-block; 
+            width: 50px; 
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            text-decoration: none;
+            font-size: 30px;
+            color:coral;
+        }
+
+        .box4 {display: none;}
+    </style>
+</head>
+<body>
+    
+    <div class="box1">
+        <div>박스</div>
+        <div>박스</div>
+        <div>박스</div>
+    </div>
+
+    <div class="box2">
+        <span>span</span>
+        <span>span</span>
+        <span>span</span>
+    </div>
+
+    <div class="box3">
+        <a href="#">a</a><a href="#">a</a>
+        <a href="#">a</a>
+    </div>
+
+    <div class="box4">
+        <input type="text">
+    </div>
+
+</body>
+</html>

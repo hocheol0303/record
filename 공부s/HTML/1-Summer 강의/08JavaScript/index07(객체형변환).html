@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //원격으로 데이터를 가져올 때 문자열로 된 형태로 전달된다.
+        var data = [
+            {id:1, title: "hi", content: "쀍!"},
+            {id:2, title: "bye", content: "헑!"},
+            {id:3, title: "hello", content: "힣!"},
+        ];
+        console.log(data);
+        
+        var result = JSON.stringify(data);   //★★★★★★★★★문자열로 변환해서 반환★★★★★★★★★★★
+        console.log(result);
+        
+        
+        var result2 = JSON.parse(result);          //★★★★★★★★★★JSON으로 변환해서 반환★★★★★★★★★★★★
+        console.log(result2);
+
+        //JSON.parse()는 값을 변환할 때 엄격한 규칙을 가집니다.
+        //키, 값이 반드시 ""로 묶여 있어야합니다.
+        
+        //  JSON.parse('{name: "홍길동"}');     //에러 : '{"name" : "홍길동"}'으로 수정해야 함
+        result3= JSON.parse('{"name":"홍길동"}');
+        console.log(result3);
+
+    </script>
+</body>
+</html>

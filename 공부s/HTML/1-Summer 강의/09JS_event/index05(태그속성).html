@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>태그 속성 변경하기</h1>
+    <select class="box">
+        <option value="1.jpg">봄</option>
+        <option value="2.jpg">여름</option>
+        <option value="3.jpg">가을</option>
+        <option value="4.jpg">겨울</option>
+    </select>
+    
+    <button id="btn">사진변경하기</button>
+    <img class="img" src="img/1.jpg" alt="이미지" width="400" style="border: 10px solid black;">
+    
+    <br>
+    <input type="color" class="col">
+    <button id="btn2">색상 변경하기</button>
+    
+    <script>
+        var btn = document.getElementById("btn");
+        
+        btn.onclick = function(){
+            //select 태그의 value 속성을 얻는다.
+            var box = document.querySelector(".box");
+            console.log(box.value);
+            
+            //img 태그의 src 속성
+            var img = document.querySelector(".img");
+            console.log(img.src);
+            
+            img.src= "img/" + box.value;  //img의 src의 값을 변경
+        }
+        
+        var btn2 = document.getElementById("btn2");
+        btn2.onclick = function(){
+            //input태그의 value 읽어야함
+            var col = document.querySelector(".col");
+            //img태그의 style속성의 border에 접근
+
+            document.querySelector(".img").style.border = "3px solid" + col.value;      //css속성 바꾸기
+        }
+    </script>
+</body>
+</html>

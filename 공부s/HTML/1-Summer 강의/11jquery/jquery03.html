@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- jquery 링크 -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    
+    <ul class="box">
+        <li>a</li>
+        <li>b</li>
+        <li>c</li>
+        <li>d</li>
+    </ul>
+
+    <div class="inner">inner</div>
+    <div class="inner">inner</div>
+    <div class="inner">inner</div>
+    <div class="inner">inner</div>
+    <div class="inner">inner</div>
+
+
+    <script>
+        //js
+        /* 
+        document.querySelectorAll(".box > li").forEach(function(a,b){
+            a.style.backgroundColor= "red";
+        }); 
+        */
+        
+        //jquery
+        $(".box > li").css("backgroundColor", "red");
+
+        console.log($(".box > li").css("backgroundColor"));
+
+        //css 한 번에 변경하기
+        $(".inner").css({
+            backgroundColor: "blue",
+            width: "50px",
+            height: "50px",
+            display: "inline-block",
+            border:"3px solid #bde50b"
+        });
+    </script>
+</body>
+</html>

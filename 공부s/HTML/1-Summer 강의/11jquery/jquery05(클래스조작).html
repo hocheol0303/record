@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <!-- jquery 링크 -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <style>
+        .btn-default {
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <button type="button" id="btn" class="btn btn-default">클래스 조작</button>
+    
+    <script>
+        //js
+        document.querySelector(".btn").classList.add("xx");
+        document.querySelector(".btn").classList.remove("xx");
+        document.getElementById("btn").onclick=function(){
+            document.querySelector(".btn").classList.toggle("btn-default");
+        }
+
+        //jquery
+        $(".btn").addClass("xx");               //클래스추가
+        $(".btn").removeClass("xx");            //클래스삭제
+        console.log($(".btn").hasClass("xx"));  //클래스 확인
+
+        //toggle - 있으면 제거 없으면 추가
+        $(".btn").click(function(){
+            //xx에 디자인 들어가고, 적용하는 형태로 사용
+            $(".btn").toggleClass("xx");
+        });
+    </script>
+</body>
+</html>

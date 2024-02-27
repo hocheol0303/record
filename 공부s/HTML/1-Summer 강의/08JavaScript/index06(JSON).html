@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        var person={
+            name:"홍길동", 
+            age:"20", 
+            arr:[1,2,3,4]
+    };
+
+    //console.log(typeof(person));  //타입 찍기
+    console.log(person);
+
+    //객체의 값 꺼내는 방법 (2가지)
+
+    //객체지향 똑같이
+    console.log(person.name);
+    console.log(person.arr);
+    console.log(person.age);
+    person.age = 38;
+    console.log(person.age);
+    
+    
+    //★★★★★★★★★★★★★ ["키 이름"] = 값 ★★★★★★★★★★★★★★
+    console.log(person["name"]);
+    person["name"] = "호빵맨";
+    console.log(person["name"]);
+    person["age"] = 156;
+    console.log(person["age"]);
+
+
+    ////////////////////////////////////
+    
+    //var exam = {math:90, eng:80, kor:100};
+    var kim = {name:"김길동", exam: {math:90, eng:80, kor:100}};        //same same
+    console.log(kim);
+    
+    //kim 안에 있는 eng를 확인
+
+    console.log(kim.exam.eng);
+    console.log(kim["exam"]["eng"]);
+    console.log(kim["exam"].eng);
+    console.log(kim.exam["eng"]);
+
+    ////////////////////
+
+    console.log("--------------------------------")
+    var arr=[
+    {id:1, title:"홍길동", arr: [1,2,3]},
+    {id:2, title:"이순신", arr: [1,2,3]},
+    {id:3, title:"사임당", arr: [1,2,3]}
+];         //객체임 함수아님d
+    
+    //이순신과 그것의 arr: 2 꺼내기
+    //둘이 같은거
+    console.log(arr[1]["title"], arr[1]["arr"][1]);
+
+    console.log(arr[1].title, arr[1].arr[1]);
+    
+    //번외
+    console.log("------------------------------------------")
+    var park = {name: '박길동', arr:[1,2,3], func:function(){}};
+    console.log(park.func);
+    console.log(park["func"]);
+    
+
+    </script>
+
+</body>
+</html>

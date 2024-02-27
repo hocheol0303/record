@@ -1,0 +1,138 @@
+.wrap {
+    width: 800px;
+    margin: 0 auto;
+    /* background-color: rgb(238, 238, 238);  */
+}
+.movie {
+    overflow: hidden;
+    margin-bottom: 50px;
+}
+.movie img {
+    width: 200px;
+    border-radius: 3%; /* 모서리 둥글게 */
+    float: left;
+}
+.movieInfomation {
+    display: inline-block;
+    margin-left: 40px;
+    float: left;
+}
+.moviename {
+    margin-bottom: 30px;
+}
+.moviename h2{
+    line-height: 0;
+    font-size: 30px;
+}
+.lineHeight p {
+    line-height: 0.0001;
+}
+#subtitle {
+    font-size: 15px;
+    letter-spacing: -1px; /* 자간 조정 */
+}
+.infoname {
+    display: inline-block;
+    color: rgb(153, 153, 153);
+}
+.info {
+    display: inline-block;
+    margin-left: 10px;
+}
+.left {
+    display: inline-block;
+    margin-right: 40px;
+}
+.right {
+    display: inline-block;
+}
+
+/* 네티즌 평점 */
+.rating {
+    display: block;
+    overflow: hidden;
+}
+.stars {
+    overflow: hidden;
+}
+.center {
+    width: 200px;
+    margin: 0 auto;
+}
+.center2 {
+    width: 600px;
+    margin: 0 auto;
+}
+.star {
+    display: inline-block;
+    font-size: 30px;
+    color: rgb(209, 209, 209);
+    float: left;
+    margin: 8px 0 0 0;
+    cursor: pointer;
+}
+.rate {
+    font-size: 30px;
+    font-weight: 900;
+    margin-left: 10px;
+    display: inline-block;
+    float: left;
+    margin: 10px 0 0 10px;
+}
+.choice {
+    line-height: 0.01;
+    font-size: 15px;
+    margin: 30px 0 0 20px;
+}
+#input {
+    margin: 20px 0 20px 0px;
+    padding: 5px 10px;
+    width: 500px;
+    height: 20px;
+    float: left;
+}
+.rating button {
+    width: 70px;
+    height: 34px;
+    margin: 20px 0 20px 0px;
+    background-color: rgb(50, 38, 58);
+    color: white;
+    float: left;
+}
+
+/* 등록 평점 */
+.top {
+    border-top: 1px solid rgb(221, 221, 221);
+    margin-top: 20px;
+}
+.userComment{
+    border-bottom: 1px solid rgb(221, 221, 221); /* 평점별 구분선 */
+
+}
+.userRating {
+    margin-top: 10px;
+    overflow: hidden;
+}
+.userRating p {
+    float: left;
+}
+.userComment .content {
+    margin: 10px 0 15px 0;
+}
+
+/*userRating부분 수정*/
+.user_Star {
+    color: red;
+    font-size: 20px;
+    letter-spacing: -5px; /* 자간 조정 */
+    margin: 0 5px 0 0;
+}
+.red {
+    color: red;
+}
+.gray {
+    color: rgb(209, 209, 209);
+}
+.user_Rate {
+    margin: 5px 0 0 7px;
+}

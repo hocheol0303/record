@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 1.swiper library -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+    <style>
+        /* 3. 스와이퍼 css지정 */
+        .swiper {
+            width: 600px;
+            height: 300px;
+        }
+        .aaa{
+            /* 사용자 클래스를 정의하고 디자인 */
+            background-image: url("/0img/bgimg.png");
+        }
+        .img{
+            width: 600px;
+            height: 300px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- 2. 스와이퍼 레이아웃 -->
+    <!-- Slider main container -->
+    <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper aaa">
+            <!-- Slides -->
+            <div class="swiper-slide"><img class="img" src="/02basic/img/giphy.gif"></div>
+            <div class="swiper-slide"><img class="img" src="/00img/f1.jpg"></div>
+            <div class="swiper-slide"><img class="img" src="/00img/f2.jpg"></div>
+            <div class="swiper-slide"><img class="img" src="/00img/f3.jpg"></div>
+            <div class="swiper-slide"><img class="img" src="/00img/f4.jpg"></div>
+            <div class="swiper-slide"><img class="img" src="/00img/1.jpg"></div>
+            <div class="swiper-slide"><img class="img" src="/00img/3.gif"></div>
+            <div class="swiper-slide"><img class="img" src="/00img/css3.png"></div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <!-- If we need scrollbar -->
+        <!-- <div class="swiper-scrollbar"></div> -->
+    </div>
+
+
+    <script>    //swiper.comjs.com/swiper-api 에 가면 설명서 있음
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            direction: 'horizontal',    //수평이동
+            loop: false,
+            effect: 'cards',    //카드이펙트
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,    //클릭으로 넘어가기
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            // And if we need scrollbar
+            // scrollbar: {
+            //     el: '.swiper-scrollbar',
+            // },
+            autoplay: {             //자동재생
+                delay: 100,         //딜레이
+                //pauseOnMouseEnter: true,    //마우스 올렸을 때 정지
+                disableOnInteraction: false,
+            },
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- jquery -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <style>
+        .color {
+            background-color: #bde50b;
+        }
+    </style>
+</head>
+<body>
+    <button type="button" id="btn1">click event</button>
+
+    <input type="text" id="tag1">
+
+    <select class="sel">
+        <option value="">1</option>
+        <option value="">2</option>
+    </select>
+
+    <ul class="box">
+        <li>마우스 이벤트</li>
+        <li>마우스 이벤트</li>
+        <li>마우스 이벤트</li>
+    </ul>
+
+    <script>
+        //클릭이벤트
+       $("#btn1").click(function(){
+        $("")
+       });
+
+       //키보드이벤트
+       $("#tag1").keyup(function(){
+        console.log(2);
+       });
+
+       //값이 변경될 때
+       $(".sel").change(function(){
+        console.log(3);
+       });
+
+       //마우스 진입시
+       $(".box > li").mouseenter(function(){
+        $(this).css("backgroundColor", "red");
+       })
+
+       //마우스 나갈시
+       $(".box > li").mouseleave(function(){
+        $(this).css("backgroundColor", "aqua");
+       })
+       $("body").mousemove(function(){
+        console.log("123");
+        $("body").toggleClass("color");
+       });
+       
+        
+    </script>
+</body>
+</html>

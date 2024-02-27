@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- jquery link -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <button onclick="ajax()">데이터 가져오기</button>
+
+    <script>
+        var page=0;
+        function ajax() {
+            var end = ++page * 10;
+            var start = end - 9;
+
+            //ajax문법 (단방향)
+            //$.ajax({키:값, ...})
+            $.ajax({
+                type: "get",    //생략 가능 보통 적음
+                url:"http://openapi.seoul.go.kr:8088/6c5a42566f686f633937697a764d63/json/bikeList/" + start + "/" + end + "/",
+                success: function(result){
+                    console.log(result.rentBikeStatus.row);
+                },
+                fail: function(result){
+                    alert("비동기에 실패했습니다.");
+                }
+            })
+        }
+    </script>
+</body>
+</html>

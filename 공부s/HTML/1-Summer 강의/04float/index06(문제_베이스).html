@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{padding: 0; margin: 0; list-style: none;}
+
+        .wrap {width: 1020px; margin: 0 auto;}
+        .content {overflow: hidden;}
+        .list-wrap {width:480px; float: left; border: 1px solid #777;}
+        .slide-wrap {width: 236px; float: left; border: 1px solid #777; height: 310px; margin:8px;}
+        .user-wrap {width: 280px; float: left; border: 1px solid #777; height: 310px;}
+
+        .list-wrap ul {overflow:hidden;}
+        .list-wrap ul li {float:left; width:33.3333%; height:155px; border: 1px solid #777; box-sizing: border-box;}
+
+        .user-wrap>div{
+            border: 1px solid #777;
+            box-sizing: border-box;
+            height: 50%;
+        }
+
+        .box{overflow: hidden;}
+
+        .box .el1, .box .el2 { font-size:small; color :#777;}
+
+        .box .el1 {float: left;}
+        .box .el2 {float: right;}
+
+        .login {
+            padding: 40px 10px;
+        }
+
+        .login button {
+            color: white;
+            background-color: rgb(25, 206, 96);
+            width: 100%;
+            height: 40px;
+            border: none;
+            margin: 10px 0;
+        }
+    </style>
+
+
+
+</head>
+<body>
+    
+    <section>
+        <div class="wrap">
+            
+        <div class="content">
+            <div class="list-wrap"><!-- 왼 -->
+                <ul>
+                    <li>사진</li>
+                    <li>사진</li>
+                    <li>사진</li>
+                    <li>사진</li>
+                    <li>사진</li>
+                    <li>사진</li>
+                </ul>
+            </div>
+            <div class="slide-wrap"><!-- 가운데 -->
+                <img src="../02basic/img/giphy.gif" alt="이미지" width="236px;" height="310px;">
+            </div>
+            <div class="user-wrap"><!-- 오른쪽 -->
+                <div class="login">
+                    <div class="box">
+                        <p class="el1">멜론을 더 안전하게 이용하세요</p>
+                        <p class="el2">회원가입</p>
+                    </div>
+                    <button>로그인</button>
+                </div>
+                <div>
+                    프로모션 영역...
+                </div>
+            </div>
+        </div>
+
+        </div>
+    </section>
+
+</body>
+</html>

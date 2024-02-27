@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="movie.css">
+
+    <!-- 제이쿼리 링크 -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <div class="movie">
+            <img src="img/hansan.jpg" alt="한산포스터">
+            <div class="movieInfomation">
+                <!-- 영화 이름 -->
+                <div class="moviename">
+                    <h2>한산: 용의 출현</h2>
+                    <p id="subtitle"><br></p>
+                </div>
+                <!-- 영화 정보(왼쪽)-->
+                <div class="left">
+                    <div class="lineHeight">
+                        <p class="infoname">개봉</p>
+                        <p class="info">2022.07.27</p>
+                    </div>
+                    <div class="lineHeight">
+                        <p class="infoname">장르</P>
+                        <p class="info">액션/드라마</p>
+                    </div>
+
+                    <div class="lineHeight">
+                        <p class="infoname">국가</P>
+                        <p class="info">한국</p>
+                    </div>
+                    <div class="lineHeight">
+                        <P class="infoname">등급</P>
+                        <p class="info">12세이상관람가</p>
+                    </div>
+                    <div class="lineHeight">
+                        <P class="infoname">러닝타임</P>
+                        <p class="info">130분</p>
+                    </div>
+                </div>
+                <!-- 영화 정보(오른쪽)-->
+                <div class="right">
+                    <div class="lineHeight">
+                        <p class="infoname">평점</p>
+                        <p class="info">8.1</p>
+                    </div>
+                    <div class="lineHeight">
+                        <p class="infoname">누적관객</p>
+                        <p class="info">2,632명</p>
+                    </div>
+                    <div class="lineHeight">
+                        <p class="infoname">박스오피스</p>
+                        <p class="info">4위</p>
+                    </div>
+                    <div class="lineHeight">
+                        <p class="infoname">쿠키영상</p>
+                        <p class="info">없음</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="rating">
+            <h3>네티즌 평점</h3>
+            <div class="center">
+                <p class="choice">별점을 선택해주세요</p>
+                <div class="stars">
+                    <p class="star">★</p>
+                    <p class="star">★</p>
+                    <p class="star">★</p>
+                    <p class="star">★</p>
+                    <p class="star">★</p>
+                    <p class="rate">0</p>
+                </div>
+            </div>
+            <div class="center2">
+                <input type="text" id="input" placeholder="감상평을 등록해주세요.">
+                <button id="register">등록</button>
+            </div>
+        </div>
+        <!-- 등록 평점 -->
+        <div class="registerRating">
+            
+        </div>
+    </div>
+    <script>
+        //별점 이벤트
+        $(".star").click(function() {
+            $(this).prevAll(".star").css("color","red");
+            $(this).nextAll(".star").css("color","rgb(209, 209, 209)");
+            $(this).css("color","red");
+        })
+        $(".star:nth-child(1)").click(function() {
+            $(".rate").html("2");
+        })
+        $(".star:nth-child(2)").click(function() {
+            $(".rate").html("4");
+        })
+        $(".star:nth-child(3)").click(function() {
+            $(".rate").html("6");
+        })
+        $(".star:nth-child(4)").click(function() {
+            $(".rate").html("8");
+        })
+        $(".star:nth-child(5)").click(function() {
+            $(".rate").html("10");
+        })
+
+        //리뷰 등록 이벤트
+        //2. 새로 등록한 리뷰 별점
+        $("#register").click(function() {
+            //태그 생성 및 내용 입력
+            $(".registerRating").append($("<div>").addClass("userComment"));
+            $(".userComment").last().append($("<div>").addClass("userRating"));
+            $(".userRating").last().append($("<p>").addClass("user_Star").html("★"));
+            $(".userRating").last().append($("<p>").addClass("user_Star").html("★"));
+            $(".userRating").last().append($("<p>").addClass("user_Star").html("★"));
+            $(".userRating").last().append($("<p>").addClass("user_Star").html("★"));
+            $(".userRating").last().append($("<p>").addClass("user_Star").html("★"));
+            $(".userRating").last().append($("<p>").addClass("user_Rate").html($(".rate").html()));
+            $(".userComment").last().append($("<p>").addClass("content").html($("#input").val()));
+            
+            //새로 등록한 리뷰 별점    
+            if($(".rate").html() === "2"){
+                $(".userRating:last .user_Star").first().nextAll(".user_Star").css("color","rgb(209, 209, 209)");
+            } else if ($(".rate").html() === "4"){
+                $(".userRating:last .user_Star:nth-child(2)").nextAll(".user_Star").css("color","rgb(209, 209, 209)");
+            } else if ($(".rate").html() === "6"){
+                $(".userRating:last .user_Star:nth-child(3)").nextAll(".user_Star").css("color","rgb(209, 209, 209)");
+            } else if ($(".rate").html() === "8"){
+                $(".userRating:last .user_Star:nth-child(4)").nextAll(".user_Star").css("color","rgb(209, 209, 209)");
+            }
+        })
+    </script>
+</body>
+</html>

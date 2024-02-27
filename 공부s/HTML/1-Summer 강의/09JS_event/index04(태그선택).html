@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">버튼버튼</button>
+
+    <ul class="list">
+        <li>안녕하세요</li>
+        <li>곧 있으면</li>
+        <li>점심시간이에요</li>
+        <li>안녕하세요</li>
+        <li>곧 있으면</li>
+        <li>점심시간이에요</li>
+        <li>안녕하세요</li>
+        <li>곧 있으면</li>
+        <li>점심시간이에요</li>
+        <li>안녕하세요</li>
+        <li>곧 있으면</li>
+        <li>점심시간이에요</li>
+        <li>안녕하세요</li>
+        <li>곧 있으면</li>
+        <li>점심시간이에요</li>
+        <li>안녕하세요</li>
+        <li>곧 있으면</li>
+        <li>점심시간이에요</li>
+        <li>안녕하세요</li>
+        <li>곧 있으면</li>
+        <li>점심시간이에요</li>
+    </ul>
+    
+    <script>
+        //console.log( document.getElementById('btn') );
+        //console.log( document.querySelector("#btn") );          //단일 태그. 최초 발견 하나만
+        //console.log( document.querySelectorAll(".list li"));    //해당 태그 전부    css선택자형태 가능
+        //console.log( document.querySelectorAll(".list li")[0]);    //첫 번째꺼만
+
+        var btn= document.getElementById("btn");
+        btn.onclick = function(){
+            
+            //첫 번째 li만 변경
+            // var li = document.querySelector(".list li");        //안녕하세요 하나
+            // li.innerHTML = "바뀌어라 얍!";
+
+            //모든 li 변경
+            var li = document.querySelectorAll(".list li");
+
+            // li[0].innerHTML = "바뀌어라 얍!!!!";
+            // li[1].innerHTML = "바뀌어라 얍!!!!";
+            // li[2].innerHTML = "바뀌어라 얍!!!!";
+            for(var i=0; i<li.length; i++){
+                li[i].innerHTML= "바꾸라바꾸라";
+            }
+        }
+    </script>
+
+    <hr>
+
+    <input type="checkbox" name='seat'>1
+    <input type="checkbox" name='seat'>2
+    <input type="checkbox" name='seat'>3
+    <input type="checkbox" name='seat'>4
+    <input type="checkbox" name='seat'>5
+
+    <button id="check">좌석체크</button>
+
+    <script>
+        //좌석체크 버튼을 누르면 name='seat'인 태그를 모두 선택해서 가져오기
+
+        var btn = document.getElementById("check");
+        btn.onclick = function(){
+            console.log(document.querySelectorAll("input[name='seat']"));
+        }
+        
+    </script>
+
+</body>
+</html>

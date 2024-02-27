@@ -1,0 +1,288 @@
+/* 메인 스타일 통일 */
+*{margin: 0; padding: 0;}
+
+html,
+body {
+position: relative;
+height: 100%;
+padding-top: 50px;
+}
+
+body {
+/* background: #000;
+color: #fff; */
+background: #fff;
+color: #000;
+font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+font-size: 14px;
+margin: 0;
+padding: 0;
+}
+/*  */
+
+.wrap2 {
+    width: 1000px;
+    margin: 0 auto;
+    margin-top: 20px;
+    /* background-color: rgb(238, 238, 238); */
+}
+.movie {
+    overflow: hidden;
+    margin-bottom: 50px;
+}
+.movie img {
+    width: 200px;
+    border-radius: 3%; /* 모서리 둥글게 */
+    float: left;
+}
+.movieInfomation {
+    display: inline-block;
+    margin-left: 40px;
+    float: left;
+}
+.moviename {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.moviename h2{
+    line-height: 0;
+    font-size: 30px;
+}
+.lineHeight p {
+    line-height: 2.5;
+}
+#subtitle {
+    margin-top: 20px;
+    font-size: 15px;
+    letter-spacing: -1px; /* 자간 조정 */
+}
+.infoname {
+    display: inline-block;
+    color: rgb(153, 153, 153);
+}
+.info {
+    display: inline-block;
+    margin-left: 10px;
+}
+.left {
+    display: inline-block;
+    margin-right: 40px;
+}
+.right {
+    display: inline-block;
+}
+
+/* 네티즌 평점 */
+.rating {
+    display: block;
+    overflow: hidden;
+}
+.stars {
+    overflow: hidden;
+}
+.center {
+    width: 205px;
+    margin: 0 auto;
+}
+.center2 {
+    width: 600px;
+    margin: 0 auto;
+}
+.star {
+    display: inline-block;
+    font-size: 30px;
+    color: rgb(209, 209, 209);
+    float: left;
+    margin: 8px 0 0 0;
+    cursor: pointer;
+}
+.rate {
+    font-size: 30px;
+    font-weight: 900;
+    margin-left: 10px;
+    display: inline-block;
+    float: left;
+    margin: 10px 0 0 10px;
+}
+.choice {
+    line-height: 0.01;
+    font-size: 15px;
+    margin: 30px 0 0 20px;
+}
+#input {
+    margin: 20px 0 20px 0px;
+    padding: 5px 10px;
+    width: 500px;
+    height: 20px;
+    float: left;
+}
+.rating button {
+    width: 70px;
+    height: 34px;
+    margin: 20px 0 20px 0px;
+    background-color: rgb(50, 38, 58);
+    color: white;
+    float: left;
+}
+
+/* 등록 평점 */
+.top {
+    border-top: 1px solid rgb(221, 221, 221);
+    margin-top: 20px;
+}
+.userComment{
+    border-bottom: 1px solid rgb(221, 221, 221); /* 평점별 구분선 */
+
+}
+.userRating {
+    margin-top: 10px;
+    overflow: hidden;
+}
+.userRating p {
+    float: left;
+}
+.userComment .content {
+    margin: 10px 0 15px 0;
+}
+
+/*userRating부분 수정*/
+.user_Star {
+    color: red;
+    font-size: 20px;
+    letter-spacing: -5px; /* 자간 조정 */
+    margin: 0 5px 0 0;
+}
+.red {
+    color: red;
+}
+.gray {
+    color: rgb(209, 209, 209);
+}
+.user_Rate {
+    margin: 5px 0 0 7px;
+}
+
+
+/*헤더 부분*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+header  {
+   background: white;
+    position: absolute;
+    left: 0;
+    top:0;
+    width: 100%;
+    z-index: 10;
+    position:fixed
+    
+}       
+.row_header {    position: relative; z-index:90;    }
+
+ul, li {list-style: none;}
+a { text-decoration: none; color: #000;}
+
+.gnb {
+    width: 600px;
+    margin: 0 auto;
+    
+}
+.gnb:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.gnb .m {
+    float: left;
+    width: 20%;           
+    text-align: center;
+       
+} 
+.gnb .m > a {
+    display: block;
+    height: 40px;            
+    line-height: 40px;
+}        
+/* ==밑줄클래스== */
+/* 븉여쓰기 .m클래스에 on이 붙은 경우 */
+.gnb .m.on > a {
+    border-bottom: 3px solid red;
+    box-sizing: border-box;
+}
+
+/* ========== */
+.gnb .m ul {
+    position: absolute;
+    left: 0;
+    top: 40px;            
+    width: 100%;
+    /* background: #000; */
+    background: #fff;
+    display: none;
+}    
+.gnb .m ul li {
+    display: inline-block;
+}
+.gnb .m ul li a {
+    display: block;
+    color: #000;
+    padding: 12px 0;
+    border-bottom: 1px solid #333;
+
+    padding:20px;
+
+}
+.gnb .m ul li:last-child a{
+    border: none;
+}
+.gnb .m ul li a:hover,
+.gnb .m ul li a:active,
+.gnb .m ul li a:focus {            
+    background: #eee;
+    color: #000;
+}
+
+.wrap {width: 1000px; margin: 0 auto; z-index: 100;}
+.wrap .top .top_left li{display:inline;}
+
+.wrap .top .top_left li a{
+    display:inline-block;
+    padding: 11px 7px;
+
+}
+.wrap .top .top_right li{display:inline;}
+
+.wrap .top .top_right li a{
+    display:inline-block;
+    padding: 11px 7px;  
+
+}
+.wrap {border-bottom: 1px solid #777;}
+.wrap .top {width: 1008px; margin: 0 auto; overflow: hidden; position: relative; height: 71px;}
+.wrap .top .top_left {float: left; font-size: 13px; margin-top: 30px;}
+.wrap .top .top_right {float: right; font-size: 13px; margin-top: 30px;}
+
+.wrap .top .name{
+    position: absolute;
+    top: 20px;
+    left: 37%;
+    text-align: center;
+
+    cursor:pointer;
+}
+
+.swiper-slide{margin-top: 10px;}
+
+
+.swiper_a .gr:after{
+    content: "";
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 140px;
+    background: linear-gradient(to bottom, rgba(0,0,0,0)0%,rgba(0,0,0,1)85%);
+}

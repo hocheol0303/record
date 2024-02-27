@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+                <!-- jquery lib -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul, li {list-style: none;}
+        a { text-decoration: none; color: #000; }
+
+        .gnb {
+            width: 600px;
+            margin: 0 auto;
+         
+        }
+        .gnb:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        .gnb .m {
+            float: left;
+            width: 25%;           
+            text-align: center;
+            position: relative;            
+        } 
+        .gnb .m > a {
+            display: block;
+            height: 40px;            
+            line-height: 40px;
+        }        
+        /* ==밑줄클래스== */
+        /* 붙여쓰기 .m클래스에 있는 on클래스를 지칭 */
+        .gnb .m.on > a{
+            border-bottom: 3px solid #bde50b;
+            box-sizing: border-box;
+        }
+
+		/* ========== */
+
+        .gnb .m ul {
+            position: absolute;
+            left: 0;
+            top: 40px;            
+            width: 100%;
+            background: #000;
+            display: none;
+        }        
+        .gnb .m ul li a {
+            display: block;
+            color: #fff;
+            padding: 12px 0;
+            border-bottom: 1px solid #333;
+        }
+        .gnb .m ul li:last-child a{
+            border: none;
+        }
+        .gnb .m ul li a:hover,
+        .gnb .m ul li a:active,
+        .gnb .m ul li a:focus {            
+            background: #eee;
+            color: #000;
+        }
+
+    </style>
+
+    <script>
+        $(document).ready(function(){
+            //마우스 이벤트
+            //진입 이벤트
+            $(".gnb .m").mouseenter(function(){
+                $(this).addClass("on");        //마우스 올라간 대상에 on클래스 추가
+                // $(this).find(".menu").css("display", "block");
+                $(this).find(".menu").fadeIn();       //애니메이션 효과 jquery함수
+                // $(this).find(".menu").slideDown();
+                // $(this).find(".menu").show();
+            })
+            $(".gnb .m").mouseleave(function(){
+                $(this).removeClass("on");
+                $(this).find(".menu").css("display", "none");
+                // $(this).find(".menu").fadeOut(); 
+            })
+        })
+    </script>
+
+</head>
+<body>
+    <header>
+        <h3 style="text-align:center;">드롭다운메뉴</h3>
+        <ul class="gnb">
+            <li class="m">
+				<a href="#">메뉴1</a>
+                <ul class="menu"><!-- position absolute -->
+                    <li><a href="/11jquery/jquery09(이벤트).html">메뉴1_1</a></li>
+                    <li><a href="#">메뉴1_2</a></li>
+                    <li><a href="#">메뉴1_3</a></li>
+                    <li><a href="#">메뉴1_4</a></li>
+                </ul>
+            </li>
+            <li class="m">
+				<a href="#">메뉴2</a>
+                <ul class="menu">
+                    <li><a href="#">메뉴2_1</a></li>
+                    <li><a href="#">메뉴2_2</a></li>
+                    <li><a href="#">메뉴2_3</a></li>
+                    <li><a href="#">메뉴2_4</a></li>
+                </ul>
+            </li>
+            <li class="m">
+				<a href="#">메뉴3</a>
+                <ul class="menu">
+                    <li><a href="#">메뉴3_1</a></li>
+                    <li><a href="#">메뉴3_2</a></li>
+                    <li><a href="#">메뉴3_3</a></li>
+                    <li><a href="#">메뉴3_4</a></li>
+                </ul>
+            </li>
+            <li class="m">
+				<a href="#">메뉴4</a>
+                <ul class="menu">
+                    <li><a href="#">메뉴4_1</a></li>
+                    <li><a href="#">메뉴4_2</a></li>
+                    <li><a href="#">메뉴4_3</a></li>
+                    <li><a href="#">메뉴4_4</a></li>
+                </ul>
+            </li>
+            
+        </ul>
+    </header>
+
+    <article>
+        
+    </article>
+
+</body>
+</html>

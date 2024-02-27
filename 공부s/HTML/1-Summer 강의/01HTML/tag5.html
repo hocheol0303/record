@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- div(block), span(inline)은 레이아웃을 구성할 때 주로 사용합니다. -->
+    <div>block</div>
+    <div>block</div>
+    <div>block</div>
+    <span>inline</span>
+    <span>inline</span>
+    <span>inline</span>
+
+    <hr>
+    <!--
+        블럭 요소는 전체영역을 공간으로 가진다.
+        블럭 요소 안에는 블럭, 인라인이 들어갈 수 있다.
+     -->
+    <p>p블럭</p>
+    <h1>h블럭</h1>
+    <ul>
+        <li>l블럭</li>
+        <li>l블럭</li>
+    </ul>
+    <div>d블럭</div>
+    <table>
+        <tr>t블럭</tr>
+    </table>
+    <form>f블럭</form>
+
+    <hr>
+    <!-- 
+        인라인 요소는 태그 자체의 크기를 가진다.
+        인라인 요소 안에는 인라인만 들어갈 수 있다.
+     -->
+    <span>span</span>
+    <strong>strong</strong>
+    <small>small</small>
+    <a href="#">a</a>
+    <b>b</b>
+    <img src="img/1.jpg" alt="image">
+
+    <!-- 블럭 부모될 수 있음
+        인라인 자식은 인라인만 가능 -->
+    <div>5
+        <div>4
+            <div>3
+                <div>2
+                    <span>1</span>
+                    <span>1(2)</span>
+                </div>
+                <div>2(2)</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

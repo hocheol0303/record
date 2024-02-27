@@ -1,0 +1,4 @@
+﻿  9_1.c
+C:\Users\hoche\OneDrive\Desktop\핵교\2-1\자료구조\Project1\Project9\9_1.c(196,24): warning C4477: 'printf' : 서식 문자열 '%x'에 'unsigned int' 형식의 인수가 필요하지만 variadic 인수 2의 형식이 'TNode *'입니다.
+C:\Users\hoche\OneDrive\Desktop\핵교\2-1\자료구조\Project1\Project9\9_1.c(196,24): warning C4313: 'printf': 서식 문자열의 '%x'이(가) TNode *' 형식의 인수 2과(와) 충돌합니다.
+  Project9.vcxproj -> C:\Users\hoche\OneDrive\Desktop\핵교\2-1\자료구조\Project1\x64\Debug\Project9.exe

@@ -1,0 +1,3 @@
+﻿  hanoi.c
+C:\Users\hoche\OneDrive\Desktop\핵교\2-1\자료구조\Project1\Project7\hanoi.c(16,2): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  Project7.vcxproj -> C:\Users\hoche\OneDrive\Desktop\핵교\2-1\자료구조\Project1\x64\Debug\Project7.exe

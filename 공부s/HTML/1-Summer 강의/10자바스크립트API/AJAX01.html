@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button type="button" onclick="ajax()">AJAX요청하기</button>
+
+    <script>
+        function ajax() {
+
+            
+            //콜백함수와 프로미스
+            
+            
+            //콜백
+                //fulfill = 성공
+                //pending = 대기중
+                //reject = 실패
+            // fetch("hi.txt").then(function(res){
+            //     res.text().then(function(data){
+            //         console.log(data);
+            //     });
+            // });
+            
+
+
+            //비동기
+            // console.log(1);
+            // var a= fetch("hi.txt");        //fetch: 자바스크립트API
+            // console.log(a);
+            // a.then(function(res){       //오면 알아서 실행해라, 나는 코드를 읽는다 -> 2가지 작업 동시에 : 비동기
+            //     console.log(2);
+            // })
+            // console.log(3);
+
+            
+            //fetch
+            //콜백함수의 첫 번째 매개변수의 실행에 대한 결과를 담아줍니다.
+            // fetch("hi.txt").then(function(a){       //a는 실행결과에 대한 정보(body), header는 요청에 대한 정보
+            //     console.log(a);
+            //     /* var b= a.text();
+            //     b.then(); */
+            //     console.log(a.text());
+            //     a.text().then(function(b){
+            //         console.log(b);
+            //     })
+            // })
+            //fetch: 비동기적 요청: promise라는 객체를 반환한다. 그 안의 then을 쓰면 콜백(성공/실패에 대한 결과)반환. a는 요청에 대한 상세정보를 가지고 있다.
+            //      text함수와 json함수를 사용할 수 있다.
+
+            fetch("hi.json").then(function(res){        //성공, 실패에 대한 결과 받음
+                console.log(res);                       //상세정보
+                res.json().then(function(data){
+                    console.log(data);
+                })
+            })
+        }
+                                                        //콜백: 성공/실패에 대한 결과, 비동기: 동시에 여러 작업
+    </script>
+</body>
+</html>

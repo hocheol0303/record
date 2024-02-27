@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #lang {margin-top: 150px;}
+        h1 {visibility: hidden; position:absolute;}
+    </style>
+    
+</head>
+
+<body>
+    <h1 class="kr">한국어입니다.</h1>
+    <h1 class="ch">중국어입니다.</h1>
+    <h1 class="jp">일본어입니다.</h1>
+    <select id="lang">
+        <option>선택</option>
+        <option value="kr">안녕</option>
+        <option value="ch">你好</option>
+        <option value="jp">こんにちは</option>
+    </select>
+
+    <script>
+        var lang = document.getElementById("lang");
+        lang.onchange = function(){
+            if(lang.value == "kr"){
+                document.querySelector(".kr").style.visibility = "visible";
+                document.querySelector(".ch").style.visibility = "hidden";
+                document.querySelector(".jp").style.visibility = "hidden";
+            }else if(lang.value == "ch"){
+                document.querySelector(".kr").style.visibility = "hidden";
+                document.querySelector(".ch").style.visibility = "visible";
+                document.querySelector(".jp").style.visibility = "hidden";
+            }else if(lang.value =="jp"){
+                document.querySelector(".kr").style.visibility = "hidden";
+                document.querySelector(".ch").style.visibility = "hidden";
+                document.querySelector(".jp").style.visibility = "visible";
+            }else{
+                document.querySelector(".kr").style.visibility = "hidden";
+                document.querySelector(".ch").style.visibility = "hidden";
+                document.querySelector(".jp").style.visibility = "hidden";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- jquery 링크 (가장 처음에 해주는 편이 좋아요) -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <input type="text" id="apple" value="홍길동">
+    <input type="text" class="melon" value="이순신">
+    <input type="password" placeholder="dkdkdk">
+
+    <hr>
+    <img class="img">
+    <script>
+        //JS
+        // var apple= document.getElementById("apple");
+        // console.log(apple); //순수한 태그
+
+        //$("선택자").jqueryMethod() 로 사용한다.
+        //Jquery
+        // console.log($("#apple"));       //jquery를 적용할 수 있는 상태
+        // console.log($("#apple")[0]);    //순수한 태그
+        // $("#apple")[0].autofocus="true";
+        // console.log($("#apple")[0].autofocus);
+
+        //js
+        var a= document.getElementById("apple").value;
+        console.log(a);
+        //jquery
+        var b= $("#apple").val();
+        console.log(b);
+
+        var c= $(".melon").val();
+        console.log(c);
+
+        //jquery 값을 변경
+        var d= $("input[type='password']").val("변기값");
+        console.log($("input[type='password']").val());
+        console.log(d.val());
+
+        $(".img").attr({src:"/00img/1.jpg", alt:"할렐루야"});
+    </script>
+</body>
+</html>

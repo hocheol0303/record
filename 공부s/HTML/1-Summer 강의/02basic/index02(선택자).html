@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin:0; padding:0;}
+        b{color:lime}
+        ul, li{list-style: none;}
+
+        #a1{color: sienna;}
+        .b1{color: darkkhaki;}
+        .c1{background-color: cyan;}
+        
+        .box p{color:green}                     /* 띄어쓰기: .box 하위 모든 자식 */
+        .box > p{background-color: black;}      /* 부등호: .box 바로 아래 자식 */
+
+        #xxx ul a {background-color: deeppink;}
+        /*
+        div ul .yyy {background-color: deeppink;}
+        #xxx > ul a {background-color: deeppink;}
+        #xxx > ul > li > a {background-color: deeppink;}
+        */
+        input[name='ttt'] {color:blueviolet;}
+
+        
+        
+    </style>
+</head>
+<body>
+    
+    <b>태그선택자</b>
+    <b>태그선택자</b>
+    <ul>
+        <li>vjdks</li>
+        <li>fdsa</li>
+        <li>qwes</li>
+    </ul>
+
+    <!-- id는 화면에서 고유한 이름을 가짐. -->
+    <p id="a1">아이디선택자</p>
+    <!-- class는 여러이름을 가질 수도 있다. 공백으로 나타낸다. -->
+    <p class="b1">클래스선택자</p>
+    <p class="b1 c1">클래스선택자</p>
+    
+    <br>
+    
+    <div class="box">
+        <p>직계자식선택자</p>
+        <p>직계자식선택자</p>
+        <div>
+            <p>하위선택자 공백</p>
+            <p>하위선택자 공백</p>
+        </div>
+    </div>
+
+    <div id="xxx">
+        <ul>
+            <li><a href="#" class="yyy">실습1</a></li>
+            <li><a href="#" class="yyy">실습2</a></li>
+        </ul>
+
+        <a href="#" class="yyy">실습</a>
+    </div>
+    
+    <input type="text" name="ttt">떡볶이
+    <input type="text" name="ttt">순대
+    <input type="text" name="ttt">감튀
+    
+</body>
+
+</html>

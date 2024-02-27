@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {padding: 0; margin: 0;}/* 여백 없애기 */
+        ul, li {list-style: none;}
+
+        .gnb ul li {display: inline;}/* 가로배치 */
+        .gnb ul li a {
+            display: inline-block; 
+            width: 50px; 
+            height: 50px; 
+            line-height: 50px; 
+            font-size: 5px; 
+            text-decoration: none;
+            color: aquamarine;
+        }/* 높이너비주기 */
+        .gnb ul li a:hover {background-color: #777;}
+        
+        .gnb {text-align: center; background-color: black;}  /* 가운데 정렬 */
+
+    </style>
+</head>
+<body>
+    
+    <nav class="gnb">
+        <ul>
+            <li><a href="#">목록1</a></li>
+            <li><a href="#">목록2</a></li>
+            <li><a href="#">목록3</a></li>
+            <li><a href="#">목록4</a></li>
+            <li><a href="#">목록5</a></li>
+        </ul>
+    </nav>
+
+</body>
+</html>

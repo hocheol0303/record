@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>자바스크립트 (인라인 이벤트와 this / innerHTML value 속성을 이용해서 카운트처리하세요)</h1>
+    <!-- 0 아래로는 내려갈 수 없음 -->
+    <input type="number" value="0" id="num">
+    <button class="plsbtn" onclick="pls()">+</button>
+    <button class="mnbtn" onclick="mn()">-</button>
+
+    <script>
+        /* var btn1= document.querySelector(".plsbtn");
+        var btn2= document.querySelector(".mnbtn");
+        var num= document.getElementById("num");
+
+        btn1.onclick = function(){
+            num.value++;
+        }
+        btn2.onclick = function(){
+            if(num.value > 0)
+            num.value -= 1;
+        } */
+
+        function pls(){
+            num.value++;
+        }
+
+        function mn(){
+            if(num.value > 0)
+            num.value--;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {margin: 0; padding: 0;}
+        .box1 {
+            margin: 0 auto;
+            overflow: hidden;
+            width: 600px;
+            
+        }
+        .box1>div {
+            float: left;
+            border: 1px solid #777;
+            box-sizing: border-box;
+            width: 50%;
+            overflow: hidden;
+        }
+        
+        .box2 {padding-bottom: 50px}
+        
+        
+        .box3>div>div{overflow:hidden;}
+        .el1 {float: left;}
+        .el2 {float: right;}
+
+        .el3 {float: left; width: 50%; box-sizing: border-box;}
+
+        .box2, .box3 {border: 2px solid #000;}
+        
+        .box4 {overflow: hidden; height: 50%;}
+        
+        .box5 {height: 50%;}
+    </style>
+</head>
+<body>
+    <h1>과제2</h1>
+    <div class="box1">
+        <div class="photo">사진</div><!-- 사진 넣으면 채워짐 -->
+        <div class="info">
+            <div class="box2">
+                <p>제목: 패딩바텀 50px</p>
+                <p>내용: ~~~</p>
+            </div>
+            <div class="box3">
+                <div class="box4">
+                    <div class="box5">
+                        <p class="el1">가격</p>
+                        <p class="el2">10000원</p>
+                    </div>
+                    <div class="box5">
+                        <input type="button" width="50%;" class="el3" value="구매하기">
+                        <input type="button" width="50%;" class="el3" value="장바구니">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

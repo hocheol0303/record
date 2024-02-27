@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {margin: 0; padding: 0;}
+        .wrap {width: 800px; border: 1px solid #777; margin: 0 auto; overflow: hidden;}
+        .wrap .box {float: left; width: 50%; border: 1px solid #777; box-sizing: border-box;}
+
+        .control {margin-top: 50px;}
+
+        .price {overflow: hidden; border: 1px solid #777;} /* 보더 안먹음 */
+        .price .left {float: left;}
+        .price .right {float: right;}
+
+        .content {overflow: hidden;}
+        .content .left {float: left; width: 50%;}
+        .content .right {float: right; width: 50%;}
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="box"><!-- 사진영역 -->
+            <img src="" alt="">
+        </div>
+        <div class="box">
+            <div><!-- 글 영역 -->
+               <p>글~~</p>
+               <p>글~~</p>
+            </div>
+            <div class="control"><!-- 버튼 영역 -->
+                <div class="price"><!-- overflow -->
+                    <span class="left">가격</span>
+                    <span class="right">오른쪽</span>
+                </div>
+                <div class="content"><!-- overflow -->
+                    <button class="left">왼</button>
+                    <button class="right">오</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

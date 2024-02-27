@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- jquery 링크 -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <select class="box">
+        <option value="1.jpg">봄</option>
+        <option value="2.jpg">여름</option>
+        <option value="3.jpg">가을</option>
+        <option value="4.jpg">겨울</option>
+        <option value="giphy.gif">스폰지밥</option>
+    </select>
+    <img class="img" src="/00img/1.jpg" alt="이미지" width="400" style="border: 10px solid black;">
+
+    <script>
+        //js
+        /* document.querySelector(".box").onchange = function () {
+            //js event
+            //$(".img").attr("src", "../00img/"+$(".box").val());
+              
+        //    if($(".box").val() == "1.jpg"){
+        //         $(".img").attr("src", "../00img/1.jpg");
+        //     } else if ($(".box").val() == "2.jpg") {
+        //         $(".img").attr("src", "../00img/2.jpg");
+        //     } else if ($(".box").val() == "3.jpg") {
+        //         $(".img").attr("src", "../00img/3.jpg");
+        //     } else if ($(".box").val() == "4.jpg") {
+        //         $(".img").attr("src", "../00img/4.jpg");
+        //     } else if ($(".box").val() =="giphy.gif"){
+        //         $(".img").attr("src", "../00img/giphy.gif");
+        //     } 
+            
+            } */
+
+        //jquery
+        $(".box").change(function () {
+            $(".img").attr("src", "/00img/" + $(".box").val());
+        })
+    </script>
+
+
+    <hr>
+
+
+
+    <h3 class="title">단어를 선택하세요</h3>
+    <select class="sel">
+        <option value="1">선택</option>
+        <option value="2">한국어</option>
+        <option value="3">영어</option>
+    </select>
+
+    <script>
+        /* $(".sel").change(function(){
+            $(".title").html($(".sel").val());
+        }) */
+
+        
+        $(".sel").change(function(){
+            var x = $(".sel").val();
+        if (x == "1") {
+            $(".title").html("골라골라");
+        } else if (x == "2") {
+            $(".title").html("한글한글");
+        } else if (x == "3") {
+            $(".title").html("영어영어");
+        }  })
+    </script>
+</body>
+
+</html>

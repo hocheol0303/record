@@ -1,0 +1,21 @@
+* {padding: 0; margin: 0;}
+ul, li {list-style: none;}
+img {max-width: 100%; height: auto;}
+a{text-decoration: none;}
+
+header {border-top: 3px solid green;}
+header .top {width:1008px; margin:0 auto;}
+header .midbottom {width:1008px; margin:0 auto;}
+.top {overflow:hidden;}
+.top .top_left {float:left;}
+.top .top_right {float:right;}
+.top ul li {display:inline-block; padding: 11px 7px;}
+.top ul li a {font-size: 12px; color:#777;}
+.mid_left{overflow:hidden;}
+.mid_left img{float:left;}
+.mid_left .search{
+    margin:36px 0 0 11px;
+    float:left;
+}
+.mid_left .search input{border:none;}
+.mid_left .search button{border:none;}

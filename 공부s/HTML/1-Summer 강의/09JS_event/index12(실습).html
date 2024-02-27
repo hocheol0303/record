@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         table {border-collapse: collapse; border-spacing: 0;}      /* border 1줄로 합치고 간격을 없앤다. */
+         tr, td, th {border:1px solid #777;}
+    </style>
+</head>
+<body>
+    <button id="five">5개 추가</button>
+    <button id="one">1개 추가</button>
+    <table>
+        <tr>
+            <th>교시</th>
+            <th>과목</th>
+            <th>담당자</th>
+            <th>내용</th>
+        </tr>
+        <tbody class="t1">
+            <tr class="list">
+                <td><input type="text" size="3"></td>
+                <td><input type="text"></td>
+                <td><input type="text" size="5"></td>
+                <td><input type="text"></td>
+            </tr>
+        </tbody>
+    </table>
+<script>
+
+    //tr 1 / td 4 / input 4
+
+    var one= document.getElementById("one");
+    var table= document.get
+    one.onclick= function(){
+        var tr1 = document.createElement("tr");
+
+        /* 
+        td1.innerHTML="<input type='text' size='3'>";
+        td2.innerHTML="<input type='text'>";
+        td3.innerHTML="<input type='text' size='5'>";
+        td4.innerHTML="<input type='text'>";
+
+        tr1.appendChild(td1);
+        tr1.appendChild(td2);
+        tr1.appendChild(td3);
+        tr1.appendChild(td4);
+
+        document.querySelector(".list").appendChild(tr1);
+         */
+
+        var td1= document.createElement("td");
+        var input1= document.createElement("input");
+        input1.type="text";
+        input1.size="3";
+        /* td1.innerHTML="<input type='text' size='3'>"; */
+
+
+        var td2= document.createElement("td");
+        var input2= document.createElement("input");
+        input2.type="text";
+        
+        var td3= document.createElement("td");
+        var input3= document.createElement("input");
+        input3.type="text";
+        input3.size="5";
+        
+        var td4= document.createElement("td");
+        var input4= document.createElement("input");
+        input4.type="text";
+
+        td1.appendChild(input1);
+        tr1.appendChild(td1);
+        td2.appendChild(input2);
+        tr1.appendChild(td2);
+        td3.appendChild(input3);
+        tr1.appendChild(td3);
+        td4.appendChild(input4);
+        tr1.appendChild(td4);
+        document.querySelector(".t1").appendChild(tr1);
+    }
+
+    var five=document.getElementById("five");
+    five.onclick=function(){
+        var tr= document.createElement("tr");
+        var td=[4];
+        var input=[4];
+        for(var i=0; i<5; i++){
+            for(var j=0; j<4; j++){
+            td[j]=document.createElement("td");
+            input[j]=document.createElement("input");
+            input[j].type='text';
+            }
+        input[0].size="3";
+        input[2].size="5";
+        }
+
+        
+    }
+</script>
+    
+</body>
+</html>

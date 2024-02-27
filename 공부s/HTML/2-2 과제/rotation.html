@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    
+    <link rel="stylesheet" href="./css/subject.css">
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="./css/header.css">
+    
+</head>
+<body>
+    <header>                                            <!-- 상단바 -->
+        <div class="wrap"><!-- 위쪽헤더 -->
+            <div class="top"><!-- margin:0 auto; -->
+                <ul class="top_left"><!-- 왼쪽 -->
+                    <li><a href="https://www.instagram.com/ghcjfaos/"><span>인스타그램</span></a></li>
+                </ul>
+                <ul class="top_right"><!-- 오른쪽 -->
+                    <li><a href="./index.html">홈</a></li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="row_header">
+            <ul class="gnb">
+                <li class="m">
+                <a href="#">수학</a>
+                    <ul class="menu"><!-- position absolute -->
+                        <li><a href="#">미적분</a></li>
+                        <li><a href="./multivariateFunc.html">다변수 함수</a></li>
+                        <li><a href="#">선형대수학</a></li>
+                        <li><a href="#">공업수학</a></li>
+                    </ul>
+                </li>
+                <li class="m">
+                <a href="#">CS</a>
+                    <ul class="menu">
+                        <li><a href="#">자료구조</a></li>
+                        <li><a href="#">컴퓨터 네트워크</a></li>
+                    </ul>
+                </li>
+                <li class="m">
+                <a href="#">프로그래밍 언어</a>
+                    <ul class="menu">
+                        <li><a href="#">C</a></li>
+                        <li><a href="#">Java</a></li>
+                        <li><a href="#">Python</a></li>
+                        <li><a href="#">HTML</a></li>
+                    </ul>
+                </li>
+
+                <li class="m"><a href="#">알고리즘</a></li>
+                
+            </ul>
+    
+        </div>
+        </header>
+    
+    <div class="wrap2">
+
+        <!-- 본문 -->
+        <div class="main">
+            <p>오늘의 목표는 원의 방정식에서 원환면 유도하기이다.</p>
+            <img src="img/torus.png" style="width: 500px;" alt="토러스">
+            <br>
+            <p>먼저, 삼각함수의 성질 a²cos²θ + a²sin²θ = a² 관계식을 이용해 매개화된 방정식을 세울 수 있다. 이 때 원의 반지름은 a이다.</p>
+            <br>
+            <p>x = 1 * cosθ, y = 1 * sinθ 인 매개화를 진행한다고 해보자</p> 
+            <br>
+            <p>이 때, cos²θ + sin²θ = 1 관계식의 cosθ, sinθ를 각각 x, y로 바꾸면 x² + y² = 1 이라는 원의 방정식이 만들어진다.</p>
+            <p>이 방정식은 원점을 중심으로하고 반지름이 1인 원의 방정식을 표현하는 방법이다.</p>
+            <br>
+            <img src="./img/circle1.png" alt="원방1" width="300" height="300">
+            <p>이러한 원을 x축 +방향으로 3만큼 움직여보자.</p>
+            <br>
+            <p>현재 원의 중심이 (0, 0)에 있으므로 x축 방향으로 3만큼 움직이면 원의 중심이 (3, 0)이 된다.</p>
+            <br>
+            <p>즉, y값에는 변화를 주지 않고 x = 3일 때 현재 그래프의 x = 0의 역할을 하도록 해야한다.</p>
+            <br>
+            <p>x가 3일 때 x에 대한 식은 0이 나와야 하므로 x에 x - 3을 대입한다.</p>
+            <br>
+            <p>따라서 평행이동한 원의 방정식은 (x-3)² + y² = 1이고 이를 매개화하면 x = cos(t) + 3, y = sin(t)이다.</p>
+            <img src="./img/circle2.png" alt="원방2" width="300" height="300">
+            <br>
+            <p>이제 3차원으로 넘어가 이 원을 y축 방향으로 회전하는 일만 남았다.</p>
+            <br>
+            <p>원의 방정식의 중심 좌표가 3이므로 a² = 3</p>
+            <p>z축을 추가한 후, 원점을 중심으로 하고 반지름을 √3으로 하는 원의 방정식을 x-z평면에 그릴 수 있고, 이러한 원의 방정식은 원환면의 중심을 지나게 된다.</p>
+            <br>
+            <p>x-y평면의 원의 방정식에서 각 점의 x좌표를 반지름으로 하는 원을 그릴 것이므로 x = xcosφ, z = xsinφ, y = sinθ가 된다.</p>
+            <br>
+            <p>따라서 x = (cosθ + 3)cosφ, z = (cosθ + 3)sinφ, y = sinθ이다. 이를 그래프로 그려보자.</p>
+            <img src="img/torus.png" style="width: 500px;" alt="토러스">
+            <p>해당 그림에선 y축과 z축이 바뀌어있다.</p>
+        </div>
+
+
+
+
+
+
+        <!-- 댓글 덩어리 -->
+        <div class="rating">
+            <h3>네티즌 평점</h3>
+            <div class="center">
+                <p class="choice">별점을 선택해주세요</p>
+                <div class="stars">
+                    <p class="star">★</p>
+                    <p class="star">★</p>
+                    <p class="star">★</p>
+                    <p class="star">★</p>
+                    <p class="star">★</p>
+                    <p class="rate">0</p>
+                </div>
+            </div>
+            <div class="center2">
+                <input type="text" id="input" placeholder="강의평을 작성해주세요.">
+                <button id="register">등록</button>
+            </div>
+        </div>
+        <!-- 기등록 되어있는 댓글! -->
+        <div class="registerRating">
+            <div class="userComment top">
+                <div class="userRating">
+                    <p class="user_Star">★</p>
+                    <p class="user_Star">★</p>
+                    <p class="user_Star">★</p>
+                    <p class="user_Star">★</p>
+                    <p class="user_Star">★</p>
+                    <p class="user_Rate">10</p>
+                </div>
+                <p class="content">이 시대의 마지막 수학 강사, "호철짱짱맨"</p>
+            </div>
+            <div class="userComment">
+                <div class="userRating">
+                    <p class="user_Star">★</p>
+                    <p class="user_Star">★</p>
+                    <p class="user_Star">★</p>
+                    <p class="user_Star">★</p>
+                    <p class="user_Star">★</p>
+                    <p class="user_Rate">10</p>
+                </div>
+                <p class="content">감동까지 겸비한 수업</p>
+            </div>
+            <div class="userComment">
+                <div class="userRating">
+                    <p class="user_Star">★</p>
+                    <p class="user_Star">★</p>
+                    <p class="user_Star">★</p>
+                    <p class="user_Star">★</p>
+                    <p class="user_Star">★</p>
+                    <p class="user_Rate">10</p>
+                </div>
+                <p class="content">개념 설명을 읽고 이렇게 전율을 느끼는거 너무 오랜만인 것 같다 ㅋㅋㅋ</p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        //댓글 등록 이벤트
+        $(".star").click(function() {
+            $(this).prevAll(".star").css("color","red");
+            $(this).nextAll(".star").css("color","rgb(209, 209, 209)");
+            $(this).css("color","red");
+        })
+        $(".star:nth-child(1)").click(function() {
+            $(".rate").html("2");
+        })
+        $(".star:nth-child(2)").click(function() {
+            $(".rate").html("4");
+        })
+        $(".star:nth-child(3)").click(function() {
+            $(".rate").html("6");
+        })
+        $(".star:nth-child(4)").click(function() {
+            $(".rate").html("8");
+        })
+        $(".star:nth-child(5)").click(function() {
+            $(".rate").html("10");
+        })
+
+        //리뷰 등록 이벤트
+        $("#register").click(function() {
+            //태그 생성 및 내용 입력
+            $(".registerRating").append($("<div>").addClass("userComment"));
+            $(".userComment").last().append($("<div>").addClass("userRating"));
+            $(".userRating").last().append($("<p>").addClass("user_Star").html("★"));
+            $(".userRating").last().append($("<p>").addClass("user_Star").html("★"));
+            $(".userRating").last().append($("<p>").addClass("user_Star").html("★"));
+            $(".userRating").last().append($("<p>").addClass("user_Star").html("★"));
+            $(".userRating").last().append($("<p>").addClass("user_Star").html("★"));
+            $(".userRating").last().append($("<p>").addClass("user_Rate").html($(".rate").html()));
+            $(".userComment").last().append($("<p>").addClass("content").html($("#input").val()));
+
+            //별점    
+            if($(".rate").html() === "2"){
+                $(".userRating:last .user_Star").first().nextAll(".user_Star").css("color","rgb(209, 209, 209)");
+            } else if ($(".rate").html() === "4"){
+                $(".userRating:last .user_Star:nth-child(2)").nextAll(".user_Star").css("color","rgb(209, 209, 209)");
+            } else if ($(".rate").html() === "6"){
+                $(".userRating:last .user_Star:nth-child(3)").nextAll(".user_Star").css("color","rgb(209, 209, 209)");
+            } else if ($(".rate").html() === "8"){
+                $(".userRating:last .user_Star:nth-child(4)").nextAll(".user_Star").css("color","rgb(209, 209, 209)");
+            }
+        })
+    </script>
+    
+    <script src="./js/script.js"></script>
+
+    <footer>Created By 컴퓨터공학과 오후반 20220848 양호철</footer>
+</body>
+</html>

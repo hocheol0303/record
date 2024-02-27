@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="메인1.css">
+
+    <!-- 제이쿼리 링크-->
+    <script src="js/jquery-3.6.0.min.js"></script>
+
+    <!-- 1.스와이퍼 라이브러리 -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+    <!--메인2 합친부분-->
+    <!-- Link Swiper's CSS -->
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/swiper/swiper-bundle.min.css"
+/>
+    <!-- Demo styles -->
+    <link rel="stylesheet" href="A.실습/A.실습/메인2.css">
+
+    <style>
+        .swiper_a img {
+            width: 100%;
+            height: auto;
+            top: 55px; /* 수정 */
+        }
+    </style>
+
+    <script>
+        $(document).ready(function() {
+            //마우스 진입하는 경우
+            $(".gnb .m").mouseenter(function() {
+                $(this).addClass("on"); //클래스 추가
+                // $(this).find(".menu").css("display", "block");
+                $(this).find(".menu").slideDown();
+                // $(this).find(".menu").fadeIn();
+                // $(this).find(".menu").show();
+            })
+            //마우스 떠나는 경우
+            $(".gnb .m").mouseleave(function() {
+                $(this).removeClass("on"); //클래스 삭제
+                $(this).find(".menu").css("display", "none");
+            })
+        })
+    </script>
+
+</head>
+<body>
+<!-- <body style="background: url('https://caching2.lottecinema.co.kr/lotte_image/2022/Che/0713/Che_1920774.jpg') no-repeat" > -->
+    <header>
+    <div class="wrap"><!-- 위쪽헤더 -->
+        <div class="top"><!-- margin:0 auto; -->
+            <div class="name">
+                <h1><a href="./HOME.html"><img id="logo" src="https://www.lottecinema.co.kr/NLCHS/Content/images/common/logo_wht.png" alt="롯데시네마"></a></h1>
+            </div>
+            <ul class="top_left"><!-- 왼쪽 -->
+                <li><a href="https://www.facebook.com/login.php?next=https%3A%2F%2Fwww.facebook.com%2Fprivacy%2Fconsent%2Fpipa%2F%3Fparams%255Bpft_surface%255D%3Dfacebook_comet%26params%255Bis_new_user_blocking_flow%255D%3Dfalse%26params%255Bpft_session_key%255D%3D0dfb842f-359b-415e-9e64-85e18abbe97f%26params%255Bis_existing_user_blocking_flow%255D%26source%3Dpipa_blocking_flow"><span>페이스북</span></a></li><!-- 수정 -->
+                <li><a href="https://www.youtube.com/channel/UCi4KivcV3a3yhkycFsjpalQ"><span>유튜브</span></a></li> <!-- 수정 -->
+                <li><a href="https://www.instagram.com/lottecinema_official/"><span>인스타그램</span></a></li> <!-- 수정 -->
+            </ul>
+            <ul class="top_right"><!-- 오른쪽 -->
+                <li><a href="#"><span>멤버십</span></a></li>
+                <li><a href="#"><span>고객센터</span></a></li>
+                <li><a href="#"><span>단체관람/대관문의</span></a></li>
+                <li><a href="#"><span>로그인</span></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row_header">
+        <ul class="gnb">
+            <li class="m">
+            <a href="#">예매</a>
+                <ul class="menu"><!-- position absolute -->
+                    <li><a href="#">예매하기</a></li>
+                    <li><a href="#">상영시간표</a></li>
+                    <li><a href="#">할인안내</a></li>
+                </ul>
+            </li>
+            <li class="m">
+            <a href="#">영화</a>
+                <ul class="menu">
+                    <li><a href="#">홈</a></li>
+                    <li><a href="movie/present.html">현재상영작</a></li>
+                    <li><a href="#">상영예정작</a></li>
+                    <li><a href="#">아르떼</a></li>
+                    <li><a href="#">국립극장</a></li>
+                </ul>
+            </li>
+            <li class="m">
+            <a href="#">영화관</a>
+                <ul class="menu">
+                    <li><a href="#">스페셜관</a></li>
+                    <li><a href="#">서울</a></li>
+                    <li><a href="#">경기/인천</a></li>
+                    <li><a href="#">충청/대전</a></li>
+                    <li><a href="#">전라/광주</a></li>
+                    <li><a href="#">경북/대구</a></li>
+                    <li><a href="#">경남/부산/울산</a></li>
+                    <li><a href="#">강원</a></li>
+                    <li><a href="#">제주</a></li>
+                </ul>
+            </li>
+            <li class="m">
+            <a href="#">이벤트</a>
+                <ul class="menu">
+                    <li><a href="#">홈</a></li>
+                    <li><a href="#">영화</a></li>
+                    <li><a href="#">시사회/무대인사</a></li>
+                    <li><a href="#">HOT</a></li>
+                    <li><a href="#">제휴할인</a></li>
+                    <li><a href="#">우리동네영화관</a></li>
+                </ul>
+            </li>
+            <li class="m">
+                <a href="#">스토어</a>
+                    <ul class="menu">
+                        <li><a href="#">베스트</a></li>
+                        <li><a href="#">관람권</a></li>
+                        <li><a href="#">스낵음료</a></li>
+                        <li><a href="#">포토카드</a></li>
+                    </ul>
+                </li>
+        </ul>
+    </div>
+    </header>
+      
+ 
+        <!-- 2.스와이퍼 레이아웃 -->
+    <div class="swiper_a">
+        <div class="swiper-wrapper aaaa">
+            <div class="swiper-slide"><img src="https://caching2.lottecinema.co.kr/lotte_image/2022/Che/0713/Che_1920774.jpg"></div>
+            <div class="swiper-slide"><img src="https://caching2.lottecinema.co.kr/lotte_image/2022/Han/Han_1920774.jpg"></div>
+        </div>
+
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <!-- If we need scrollbar -->
+        <!-- <div class="swiper-scrollbar"></div> -->
+        
+    </div>
+
+    <!--메인2 합친부분-->
+     <!-- Swiper -->
+     <div class="swiper mySwiper">
+        <div class="time">
+            <p class="time-t"><i class="icon_clock">백그라운드</i>07.21 15:00 기준</p>
+        </div>
+        
+        <div class="swiper-wrapper">
+          <div class="swiper-slide xx">
+            <img src="A.실습/A.실습/movie_img/미니언즈.jpg" alt="미니언즈">
+            <span><p class="mv-text">
+                <strong>미니언즈2</strong>
+                <br><span>예매율 31.8% |&nbsp;<i class="icon_star">&nbsp;&nbsp;&nbsp;9</i>  |&nbsp;</span>
+                <span id="icon-heart">&nbsp;&nbsp;&nbsp;</span>
+            </p></span>
+            <div class="darkness"></div>
+            <div class="btn-plus">
+                <a draggable="false">예매하기</a>
+                <a draggable="false" href="./minions.html">상세정보</a>
+
+            </div>
+          </div>
+
+          <div class="swiper-slide xx">
+            <img src="A.실습/A.실습/movie_img/외계인.jpg" alt="외계인">
+            <span><p class="mv-text">
+                <strong>외+계인 1부</strong>
+                <br><span>예매율 24.6% |&nbsp;<i class="icon_star">&nbsp;&nbsp;&nbsp;8.4</i>  |</span>
+                <span id="icon-heart">&nbsp;&nbsp;&nbsp;</span>
+            </p></span>
+            <div class="darkness"></div>
+            <div class="btn-plus">
+                <a draggable="false">예매하기</a>
+                <a draggable="false" href="./Alienoid.html">상세정보</a>
+            </div>
+          </div>
+          
+          <div class="swiper-slide xx">
+            <img src="A.실습/A.실습/movie_img/탑건.jpg" alt="탑건">
+            <span><p class="mv-text">
+                <strong>탑건:매버릭</strong>
+                <br><span>예매율 17.7% |&nbsp;<i class="icon_star">&nbsp;&nbsp;&nbsp;9.8</i>  |</span>
+                <span id="icon-heart">&nbsp;&nbsp;&nbsp;</span>
+            </p></span>
+            <div class="darkness"></div>
+            <div class="btn-plus">
+                <a draggable="false">예매하기</a>
+                <a draggable="false" href="./topgun.html">상세정보</a>
+            </div>
+          </div>
+
+          <div class="swiper-slide xx">
+            <img src="A.실습/A.실습/movie_img/한산.jpg" alt="한산">
+            <span><p class="mv-text">
+                <strong>한산:용의 출현</strong>
+                <br><span>예매율 12.4% | <span class="fs">D-6</span>  |</span>
+                <span id="icon-heart">&nbsp;&nbsp;&nbsp;</span>
+            </p></span>
+            <div class="darkness"></div>
+            <div class="btn-plus">
+                <a draggable="false">예매하기</a>
+                <a draggable="false" href="./hansan.html">상세정보</a>
+            </div>
+          </div>
+          
+          <div class="swiper-slide xx">
+            <img src="A.실습/A.실습/movie_img/헤어질결심.jpg" alt="헤어질결심">            <span><p class="mv-text">
+                <strong>헤어질 결심</strong>
+                <br><span>예매율 3.9% |&nbsp;<i class="icon_star">&nbsp;&nbsp;&nbsp;9.1</i> |</span>
+                <span id="icon-heart">&nbsp;&nbsp;&nbsp;</span>
+            </p></span>
+            <p class="mv-text"><strong></strong></p>
+            <div class="darkness"></div>
+            <div class="btn-plus">
+                <a draggable="false">예매하기</a>
+                <a draggable="false" href="./DecisionToLeave.html">상세정보</a>
+            </div>
+          </div>
+
+          <div class="swiper-slide xx">
+            <img src="A.실습/A.실습/movie_img/비상선언.jpg" alt="비상선언">
+            <p class="mv-text">
+                <strong>비상선언</strong>
+                <br><span>예매율 2.1% | <span class="fs">D-13</span>  |</span> 
+                <span id="icon-heart">&nbsp;&nbsp;&nbsp;</span>
+                </p></span>
+            <div class="darkness"></div>
+            <div class="btn-plus">
+                <a draggable="false">예매하기</a>
+                <a draggable="false" href="./emergency.html">상세정보</a>
+            </div>
+          </div>
+
+          <div class="swiper-slide xx">
+            <img src="A.실습/A.실습/movie_img/토르.jpg" alt="토르">
+            <span><p class="mv-text">
+                <strong>토르:러브 앤 썬더</strong>
+                <br><span>예매율 2.0% |&nbsp;<i class="icon_star">&nbsp;&nbsp;&nbsp;7.9</i>  |</span>
+                <span id="icon-heart">&nbsp;&nbsp;&nbsp;</span>
+            </p></span>
+            <p class="mv-text"><strong></strong></p>
+            <div class="darkness"></div>
+            <div class="btn-plus">
+                <a draggable="false">예매하기</a>
+                <a draggable="false" href="./Thor.html">상세정보</a>
+            </div>
+          </div>
+          
+          <div class="swiper-slide xx">
+            <img src="A.실습/A.실습/movie_img/코난.jpg" alt="코난">
+            <span><p class="mv-text">
+                <strong>명탐정 코난:할로윈의 신부</strong>
+                <br><span>예매율 31.8% |&nbsp;<i class="icon_star">&nbsp;&nbsp;&nbsp;9</i>  |</span>
+                <span id="icon-heart">&nbsp;&nbsp;&nbsp;</span>
+                </p></span>
+            <p class="mv-text"><strong></strong></p>
+            <div class="darkness"></div>
+            <div class="btn-plus">
+                <a draggable="false">예매하기</a>
+                <a draggable="false" href="./conan.html">상세정보</a>
+            </div>
+          </div>
+          
+          <div class="swiper-slide xx">
+            <img src="A.실습/A.실습/movie_img/멘.jpg" alt="멘">
+            <p class="mv-text"><strong>멘</strong>
+                <br><span>예매율 1.3% |&nbsp;<i class="icon_star">&nbsp;&nbsp;&nbsp;7.2</i>  |</span>
+                <span id="icon-heart">&nbsp;&nbsp;&nbsp;</span>
+            </p></span>
+            <div class="darkness"></div>
+            <div class="btn-plus">
+                <a draggable="false">예매하기</a>
+                <a draggable="false" href="./men.html">상세정보</a>
+            </div>
+          </div>
+          
+          <div class="swiper-slide xx">
+            <img src="A.실습/A.실습/movie_img/썸머필름을타고.jpg" alt="썸머">
+            <p class="mv-text"><strong>썸머 필름을 타고!</strong>
+                <br><span>예매율 0.6% |&nbsp;<i class="icon_star">&nbsp;&nbsp;&nbsp;8.6</i>  |</span>
+                <span id="icon-heart">&nbsp;&nbsp;&nbsp;</span>
+            </p></span>
+            <div class="darkness"></div>
+            <div class="btn-plus">
+                <a draggable="false">예매하기</a>
+                <a draggable="false" href="./summer.html">상세정보</a>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination "></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev" ></div>  
+    </div>
+
+    <script>
+        
+        // <!-- 4. 스와이퍼 JS -->
+        const swiper = new Swiper('.swiper_a', {
+            // Optional parameters 
+            direction: 'horizontal', /* 수직, 수평 */
+            loop: true, /* 무한루프 */
+            
+            /* 자동재생 */
+            autoplay: {
+                delay: 1800,
+                /* pauseOnMouseEnter: true,  */
+                disableOnInteraction: false, /* 상호작용후 자동재생 적용 */
+            },
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true, /* 클릭 옵션 */
+                type: 'fraction', /* 타입 */
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            // And if we need scrollbar
+           /* 
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+            */
+        });
+
+    </script>
+
+    <!--메인2 넣은부분-->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>  
+
+    <script>
+        var swiper2 = new Swiper(".mySwiper", {
+          // Optional parameters
+          direction: 'horizontal', /* 수직, 수평 */
+          loop: true, /* 무한루프 */
+          slidesPerView: 5,
+          spaceBetween: 50,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            type: 'none',
+          },
+          // Navigation arrows
+          navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+</body>
+</html>
+

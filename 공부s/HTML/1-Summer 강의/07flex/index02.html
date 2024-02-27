@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {background-color: yellow; padding:10px;}
+        .item {background-color: green; width:50px; height:50px; margin:10px;}
+        .container {display:flex; height:100vh;}/* 한 번에 이= */
+        .container .item1 {
+            /* flex-basis: 50%; */
+            /* flex-grow: 9; */
+            /* flex-shrink: 3; */
+            flex: 3 3 50%;          /* 위 3개의 속성 flex 하나로 단축시킴 */
+            order: 3;         /* 순서지정 기본값 0 오름차순 정렬 */
+            align-self: center;/* 해당 item에만 align-items속성 주기 */
+        }
+        .container .item2 {
+            /* flex-basis: 20%; */
+            /* flex-grow: 6; */
+            /* flex-shrink: 2; */
+            flex: 2 2 50%;          /* 위 3개의 속성 flex 하나로 단축시킴 */
+        }
+        .container .item3 {
+            /* flex-basis: 30%; */
+            /* flex-grow: 1; */
+            /* flex-shrink: 1; */
+            flex: 1 1 30%;          /* 위 3개의 속성 flex 하나로 단축시킴 */
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container box">
+        <div class="item1 item">1</div>
+        <div class="item2 item">2</div>
+        <div class="item3 item">3</div>
+    </div>
+
+
+</body>
+</html>

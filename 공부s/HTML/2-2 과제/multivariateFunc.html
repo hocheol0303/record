@@ -1,0 +1,304 @@
+<!-- 다변수 함수 -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>다변수 함수</title>
+
+    <!-- jquery 임포트 -->
+    <script src='js/jquery-3.6.0.min.js'></script>
+
+    <!-- 각 과목 페이지의 css 파일 -->
+    <link rel="stylesheet" href="./css/subList.css">
+    <link rel="stylesheet" href="./css/header.css">
+    
+    
+</head>
+
+<body>
+
+    <header>                                            <!-- 상단바 -->
+        <div class="wrap"><!-- 위쪽헤더 -->
+            <div class="top"><!-- margin:0 auto; -->
+                <ul class="top_left"><!-- 왼쪽 -->
+                    <li><a href="https://www.instagram.com/ghcjfaos/"><span>인스타그램</span></a></li>
+                </ul>
+                <ul class="top_right"><!-- 오른쪽 -->
+                    <li><a href="./index.html">홈</a></li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="row_header">
+            <ul class="gnb">
+                <li class="m">
+                <a href="#">수학</a>
+                    <ul class="menu"><!-- position absolute -->
+                        <li><a href="./calculus.html">미적분</a></li>
+                        <li><a href="./multivariateFunc.html">다변수 함수</a></li>
+                        <li><a href="./linearAlgebra.html">선형대수학</a></li>
+                        <li><a href="./engineeringMath.html">공업수학</a></li>
+                    </ul>
+                </li>
+                <li class="m">
+                <a href="#">CS</a>
+                    <ul class="menu">
+                        <li><a href="./dataStructure.html">자료구조</a></li>
+                        <li><a href="./network.html">컴퓨터 네트워크</a></li>
+                    </ul>
+                </li>
+                <li class="m">
+                <a href="#">프로그래밍 언어</a>
+                    <ul class="menu">
+                        <li><a href="./HTML.html">HTML</a></li>
+                    </ul>
+                </li>
+
+                <li class="m"><a href="./algorithm.html">알고리즘</a></li>
+                
+            </ul>
+    
+        </div>
+        </header>                                       <!-- 상단바부분 -->
+
+        
+        <div id="body">
+            <div id="bodyBody">
+                <div id="bodyHead">
+                    <div id="subject">
+                        <h1>다변수 함수</h1>
+                    </div>
+                </div>
+                <div id="bodyBottom">
+                    <ul class="subject">
+                        <!-- 개념 목록 -->
+
+                        
+                        <li><!-- 평면 위의 그래프 회전 -->
+                            <div style="margin-right:20px"><img src="./img/torus.png" alt="메인 이미지" width="100" height="140">
+                            </div>
+                            <div>
+                                <div><a href="./rotation.html" style="font-family: tahoma;">평면 위의 그래프의 회전</a></div>
+                                <div class="base">
+                                    <p>독자의 평가</p>
+                                    <div class="starBase">
+                                        <p class="star" id="star1"></p><!-- 별점그림 -->
+                                    </div>
+                                    <p class="evalue" style="font-size:25px; font-weight:bolder;">9.5</p>
+                                </div>
+                                <div><!-- 관련지식 검색 -->
+                                    <div>
+                                        <p class="cc">관련지식</p>
+                                        <a class="relate" href="#">삼각함수의 성질</a>,
+                                        <a class="relate" href="#">곡선의 매개화</a>,
+                                        <a class="relate" href="#">공간도형의 방정식</a>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </li>
+
+                        
+                        <li><!-- 평면 위의 그래프 회전 -->
+                            <div style="margin-right:20px"><img src="./img/torus.png" alt="메인 이미지" width="100" height="140">
+                            </div>
+                            <div>
+                                <div><a href="./rotation.html" style="font-family: tahoma;">평면 위의 그래프의 회전</a></div>
+                                <div class="base">
+                                    <p>독자의 평가</p>
+                                    <div class="starBase">
+                                        <p class="star" id="star1"></p><!-- 별점그림 -->
+                                    </div>
+                                    <p class="evalue" style="font-size:25px; font-weight:bolder;">3.5</p>
+                                </div>
+                                <div><!-- 관련지식 검색 -->
+                                    <div>
+                                        <p class="cc">관련지식</p>
+                                        <a class="relate" href="#">삼각함수의 성질</a>,
+                                        <a class="relate" href="#">곡선의 매개화</a>,
+                                        <a class="relate" href="#">공간도형의 방정식</a>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </li>
+
+                        
+                        <li><!-- 평면 위의 그래프 회전 -->
+                            <div style="margin-right:20px"><img src="./img/torus.png" alt="메인 이미지" width="100" height="140">
+                            </div>
+                            <div>
+                                <div><a href="./rotation.html" style="font-family: tahoma;">평면 위의 그래프의 회전</a></div>
+                                <div class="base">
+                                    <p>독자의 평가</p>
+                                    <div class="starBase">
+                                        <p class="star" id="star1"></p><!-- 별점그림 -->
+                                    </div>
+                                    <p class="evalue" style="font-size:25px; font-weight:bolder;">5.5</p>
+                                </div>
+                                <div><!-- 관련지식 검색 -->
+                                    <div>
+                                        <p class="cc">관련지식</p>
+                                        <a class="relate" href="#">삼각함수의 성질</a>,
+                                        <a class="relate" href="#">곡선의 매개화</a>,
+                                        <a class="relate" href="#">공간도형의 방정식</a>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </li>
+
+                        
+                        <li><!-- 평면 위의 그래프 회전 -->
+                            <div style="margin-right:20px"><img src="./img/torus.png" alt="메인 이미지" width="100" height="140">
+                            </div>
+                            <div>
+                                <div><a href="./rotation.html" style="font-family: tahoma;">평면 위의 그래프의 회전</a></div>
+                                <div class="base">
+                                    <p>독자의 평가</p>
+                                    <div class="starBase">
+                                        <p class="star" id="star1"></p><!-- 별점그림 -->
+                                    </div>
+                                    <p class="evalue" style="font-size:25px; font-weight:bolder;">6.5</p>
+                                </div>
+                                <div><!-- 관련지식 검색 -->
+                                    <div>
+                                        <p class="cc">관련지식</p>
+                                        <a class="relate" href="#">삼각함수의 성질</a>,
+                                        <a class="relate" href="#">곡선의 매개화</a>,
+                                        <a class="relate" href="#">공간도형의 방정식</a>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </li>
+
+                        
+                        <li><!-- 평면 위의 그래프 회전 -->
+                            <div style="margin-right:20px"><img src="./img/torus.png" alt="메인 이미지" width="100" height="140">
+                            </div>
+                            <div>
+                                <div><a href="./rotation.html" style="font-family: tahoma;">평면 위의 그래프의 회전</a></div>
+                                <div class="base">
+                                    <p>독자의 평가</p>
+                                    <div class="starBase">
+                                        <p class="star" id="star1"></p><!-- 별점그림 -->
+                                    </div>
+                                    <p class="evalue" style="font-size:25px; font-weight:bolder;">6.5</p>
+                                </div>
+                                <div><!-- 관련지식 검색 -->
+                                    <div>
+                                        <p class="cc">관련지식</p>
+                                        <a class="relate" href="#">삼각함수의 성질</a>,
+                                        <a class="relate" href="#">곡선의 매개화</a>,
+                                        <a class="relate" href="#">공간도형의 방정식</a>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </li>
+
+                        
+                        <li><!-- 평면 위의 그래프 회전 -->
+                            <div style="margin-right:20px"><img src="./img/torus.png" alt="메인 이미지" width="100" height="140">
+                            </div>
+                            <div>
+                                <div><a href="./rotation.html" style="font-family: tahoma;">평면 위의 그래프의 회전</a></div>
+                                <div class="base">
+                                    <p>독자의 평가</p>
+                                    <div class="starBase">
+                                        <p class="star" id="star1"></p><!-- 별점그림 -->
+                                    </div>
+                                    <p class="evalue" style="font-size:25px; font-weight:bolder;">6.5</p>
+                                </div>
+                                <div><!-- 관련지식 검색 -->
+                                    <div>
+                                        <p class="cc">관련지식</p>
+                                        <a class="relate" href="#">삼각함수의 성질</a>,
+                                        <a class="relate" href="#">곡선의 매개화</a>,
+                                        <a class="relate" href="#">공간도형의 방정식</a>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </li>
+
+                        
+                        <li><!-- 평면 위의 그래프 회전 -->
+                            <div style="margin-right:20px"><img src="./img/torus.png" alt="메인 이미지" width="100" height="140">
+                            </div>
+                            <div>
+                                <div><a href="./rotation.html" style="font-family: tahoma;">평면 위의 그래프의 회전</a></div>
+                                <div class="base">
+                                    <p>독자의 평가</p>
+                                    <div class="starBase">
+                                        <p class="star" id="star1"></p><!-- 별점그림 -->
+                                    </div>
+                                    <p class="evalue" style="font-size:25px; font-weight:bolder;">6.5</p>
+                                </div>
+                                <div><!-- 관련지식 검색 -->
+                                    <div>
+                                        <p class="cc">관련지식</p>
+                                        <a class="relate" href="#">삼각함수의 성질</a>,
+                                        <a class="relate" href="#">곡선의 매개화</a>,
+                                        <a class="relate" href="#">공간도형의 방정식</a>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </li>
+
+                        
+                        <li><!-- 평면 위의 그래프 회전 -->
+                            <div style="margin-right:20px"><img src="./img/torus.png" alt="메인 이미지" width="100" height="140">
+                            </div>
+                            <div>
+                                <div><a href="./rotation.html" style="font-family: tahoma;">평면 위의 그래프의 회전</a></div>
+                                <div class="base">
+                                    <p>독자의 평가</p>
+                                    <div class="starBase">
+                                        <p class="star" id="star1"></p><!-- 별점그림 -->
+                                    </div>
+                                    <p class="evalue" style="font-size:25px; font-weight:bolder;">6.5</p>
+                                </div>
+                                <div><!-- 관련지식 검색 -->
+                                    <div>
+                                        <p class="cc">관련지식</p>
+                                        <a class="relate" href="#">삼각함수의 성질</a>,
+                                        <a class="relate" href="#">곡선의 매개화</a>,
+                                        <a class="relate" href="#">공간도형의 방정식</a>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+
+            </div>
+
+            
+
+
+
+
+
+            <!-- 맨 위로 가기 버튼 -->
+            <div id="goToTop">
+                <a href="#"><img src="img/top.png" width="50" height="50" alt="위로"></a>
+            </div>
+
+        </div>
+    </div>
+
+        <script src="./js/script.js"></script>
+    <footer>Created By 컴퓨터공학과 오후반 20220848 양호철</footer>
+</body>
+
+</html>

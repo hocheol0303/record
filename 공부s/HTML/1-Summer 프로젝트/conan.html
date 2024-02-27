@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="movie.css">
+
+    <!-- 제이쿼리 링크 -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <!-- 1.스와이퍼 라이브러리 -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            //마우스 진입하는 경우
+            $(".gnb .m").mouseenter(function() {
+                $(this).addClass("on"); //클래스 추가
+                // $(this).find(".menu").css("display", "block");
+                $(this).find(".menu").slideDown();
+                // $(this).find(".menu").fadeIn();
+                // $(this).find(".menu").show();
+            })
+            //마우스 떠나는 경우
+            $(".gnb .m").mouseleave(function() {
+                $(this).removeClass("on"); //클래스 삭제
+                $(this).find(".menu").css("display", "none");
+            })
+        })
+    </script>
+    <style>
+        .swiper_a img {
+            width: 100%;
+            height: auto;
+            top: 90px; /* 수정 */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="wrap"><!-- 위쪽헤더 -->
+            <div class="top"><!-- margin:0 auto; -->
+                <div class="name">
+                    <h1><img id="logo" src="https://www.lottecinema.co.kr/NLCHS/Content/images/common/logo.png" alt="롯데시네마"></h1>
+                </div>
+                <ul class="top_left"><!-- 왼쪽 -->
+                    <li><a href="#"><span>페이스북</span></a></li>
+                    <li><a href="#"><span>유튜브</span></a></li>
+                    <li><a href="#"><span>인스타그램</span></a></li>
+                </ul>
+                <ul class="top_right"><!-- 오른쪽 -->
+                    <li><a href="#"><span>멤버십</span></a></li>
+                    <li><a href="#"><span>고객센터</span></a></li>
+                    <li><a href="#"><span>단체관람/대관문의</span></a></li>
+                    <li><a href="#"><span>로그인</span></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row_header">
+            <ul class="gnb">
+                <li class="m">
+                <a href="#">예매</a>
+                    <ul class="menu"><!-- position absolute -->
+                        <li><a href="#">예매하기</a></li>
+                        <li><a href="#">상영시간표</a></li>
+                        <li><a href="#">할인안내</a></li>
+                    </ul>
+                </li>
+                <li class="m">
+                <a href="#">영화</a>
+                    <ul class="menu">
+                        <li><a href="./HOME.html">홈</a></li>
+                        <li><a href="./movie/present.html">현재상영작</a></li>
+                        <li><a href="#">상영예정작</a></li>
+                        <li><a href="#">아르떼</a></li>
+                        <li><a href="#">국립극장</a></li>
+                    </ul>
+                </li>
+                <li class="m">
+                <a href="#">영화관</a>
+                    <ul class="menu">
+                        <li><a href="#">스페셜관</a></li>
+                        <li><a href="#">서울</a></li>
+                        <li><a href="#">경기/인천</a></li>
+                        <li><a href="#">충청/대전</a></li>
+                        <li><a href="#">전라/광주</a></li>
+                        <li><a href="#">경북/대구</a></li>
+                        <li><a href="#">경남/부산/울산</a></li>
+                        <li><a href="#">강원</a></li>
+                        <li><a href="#">제주</a></li>
+                    </ul>
+                </li>
+                <li class="m">
+                <a href="#">이벤트</a>
+                    <ul class="menu">
+                        <li><a href="#">홈</a></li>
+                        <li><a href="#">영화</a></li>
+                        <li><a href="#">시사회/무대인사</a></li>
+                        <li><a href="#">HOT</a></li>
+                        <li><a href="#">제휴할인</a></li>
+                        <li><a href="#">우리동네영화관</a></li>
+                    </ul>
+                </li>
+                <li class="m">
+                    <a href="#">스토어</a>
+                        <ul class="menu">
+                            <li><a href="#">베스트</a></li>
+                            <li><a href="#">관람권</a></li>
+                            <li><a href="#">스낵음료</a></li>
+                            <li><a href="#">포토카드</a></li>
+                        </ul>
+                    </li>
+            </ul>
+        </div>
+    </header>
+    <!-- 2.스와이퍼 레이아웃 -->
+    <div class="swiper_a">
+        <div class="swiper-wrapper aaaa">
+            <div class="swiper-slide"><img src="img/conanimg.png"></div>
+            <div class="swiper-slide"><img src="img/conanimg2.png"></div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <!-- If we need scrollbar -->
+        <!-- <div class="swiper-scrollbar"></div> -->
+    <div class="wrap2">
+        <div class="movie">
+            <img src="img/conan.jpg" style="width: 200px;" alt="명탐정코난포스터">
+            <div class="movieInfomation">
+                <!-- 영화 이름 -->
+                <div class="moviename">
+                    <h2>명탐정 코난: 할로윈의 신부</h2>
+                    <p id="subtitle">Detective Conan: The Bride of Halloween, 名探偵コナン　ハロウィンの花嫁, 2022</p>
+                </div>
+                <!-- 영화 정보(왼쪽)-->
+                <div class="left">
+                    <div class="lineHeight">
+                        <p class="infoname">개봉</p>
+                        <p class="info">2022.07.13</p>
+                    </div>
+                    <div class="lineHeight">
+                        <p class="infoname">장르</P>
+                        <p class="info">애니메이션/미스터리</p>
+                    </div>
+
+                    <div class="lineHeight">
+                        <p class="infoname">국가</P>
+                        <p class="info">일본</p>
+                    </div>
+                    <div class="lineHeight">
+                        <P class="infoname">등급</P>
+                        <p class="info">12세이상관람가</p>
+                    </div>
+                    <div class="lineHeight">
+                        <P class="infoname">러닝타임</P>
+                        <p class="info">110분</p>
+                    </div>
+                </div>
+                <!-- 영화 정보(오른쪽)-->
+                <div class="right">
+                    <div class="lineHeight">
+                        <p class="infoname">평점</p>
+                        <p class="info">8.7</p>
+                    </div>
+                    <div class="lineHeight">
+                        <p class="infoname">누적관객</p>
+                        <p class="info">271,898명</p>
+                    </div>
+                    <div class="lineHeight">
+                        <p class="infoname">박스오피스</p>
+                        <p class="info">6위</p>
+                    </div>
+                    <div class="lineHeight">
+                        <p class="infoname">쿠키영상</p>
+                        <p class="info">없음</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="rating">
+            <h3>네티즌 평점</h3>
+            <div class="center">
+                <p class="choice">별점을 선택해주세요</p>
+                <div class="stars">
+                    <p class="star">★</p>
+                    <p class="star">★</p>
+                    <p class="star">★</p>
+                    <p class="star">★</p>
+                    <p class="star">★</p>
+                    <p class="rate">0</p>
+                </div>
+            </div>
+            <div class="center2">
+                <input type="text" id="input" placeholder="감상평을 등록해주세요.">
+                <button id="register">등록</button>
+            </div>
+        </div>
+        <!-- 등록 평점 -->
+        <div class="registerRating">
+            <div class="userComment top">
+                <div class="userRating">
+                    <p class="user_Star">★</p>
+                    <p class="user_Star">★</p>
+                    <p class="user_Star">★</p>
+                    <p class="user_Star">★</p>
+                    <p class="user_Star gray">★</p>
+                    <p class="user_Rate">8</p>
+                </div>
+                <p class="content">최근 나온 코난 극장판 중 가장 재미있었습니다 반전도 재미있고 액션장면도 멋있었어요</p>
+            </div>
+            <div class="userComment">
+                <div class="userRating">
+                    <p class="user_Star">★</p>
+                    <p class="user_Star">★</p>
+                    <p class="user_Star">★</p>
+                    <p class="user_Star">★</p>
+                    <p class="user_Star">★</p>
+                    <p class="user_Rate">10</p>
+                </div>
+                <p class="content">역대 코난 영화 중 가장 완성도가 높다고 생각되는 작품 ! 수미상관 구조도 그렇고 각본, 연출, 작화, 영상미, OST 등등 처음부터 끝까지 제작진이 공들인 티가 팍팍 났다... 동기조 서사를 주축으로 한 스토리 전개도 탄탄하고 감동적이었음 베이커가의 망령 이후로 이렇게 가슴 벅차오를 정도로 훈훈한 스토리는 처음인 듯... 마지막 엔딩 OST 들으면서 속으로 대성통곡했다... 다들 할신 보세요 두 번 보세요 ㅠㅠ</p>
+            </div>
+            <div class="userComment">
+                <div class="userRating">
+                    <p class="user_Star">★</p>
+                    <p class="user_Star">★</p>
+                    <p class="user_Star gray">★</p>
+                    <p class="user_Star gray">★</p>
+                    <p class="user_Star gray">★</p>
+                    <p class="user_Rate">4</p>
+                </div>
+                <p class="content">어릴때 이후로 오랜만에 봤는데 생각했던 장르가 아니었어요. 추리물을 기대했는데 히어로 액션물에 가깝네요. 진범도 쉽게 추측가능해서 허무했습니다.</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        //별점 이벤트
+        $(".star").click(function() {
+            $(this).prevAll(".star").css("color","red");
+            $(this).nextAll(".star").css("color","rgb(209, 209, 209)");
+            $(this).css("color","red");
+        })
+        $(".star:nth-child(1)").click(function() {
+            $(".rate").html("2");
+        })
+        $(".star:nth-child(2)").click(function() {
+            $(".rate").html("4");
+        })
+        $(".star:nth-child(3)").click(function() {
+            $(".rate").html("6");
+        })
+        $(".star:nth-child(4)").click(function() {
+            $(".rate").html("8");
+        })
+        $(".star:nth-child(5)").click(function() {
+            $(".rate").html("10");
+        })
+
+        //리뷰 등록 이벤트
+        $("#register").click(function() {
+            //태그 생성 및 내용 입력
+            $(".registerRating").append($("<div>").addClass("userComment"));
+            $(".userComment").last().append($("<div>").addClass("userRating"));
+            $(".userRating").last().append($("<p>").addClass("user_Star").html("★"));
+            $(".userRating").last().append($("<p>").addClass("user_Star").html("★"));
+            $(".userRating").last().append($("<p>").addClass("user_Star").html("★"));
+            $(".userRating").last().append($("<p>").addClass("user_Star").html("★"));
+            $(".userRating").last().append($("<p>").addClass("user_Star").html("★"));
+            $(".userRating").last().append($("<p>").addClass("user_Rate").html($(".rate").html()));
+            $(".userComment").last().append($("<p>").addClass("content").html($("#input").val()));
+
+            //별점    
+            if($(".rate").html() === "2"){
+                $(".userRating:last .user_Star").first().nextAll(".user_Star").css("color","rgb(209, 209, 209)");
+            } else if ($(".rate").html() === "4"){
+                $(".userRating:last .user_Star:nth-child(2)").nextAll(".user_Star").css("color","rgb(209, 209, 209)");
+            } else if ($(".rate").html() === "6"){
+                $(".userRating:last .user_Star:nth-child(3)").nextAll(".user_Star").css("color","rgb(209, 209, 209)");
+            } else if ($(".rate").html() === "8"){
+                $(".userRating:last .user_Star:nth-child(4)").nextAll(".user_Star").css("color","rgb(209, 209, 209)");
+            }
+        })
+
+        // 로고 클릭시 홈 화면 이동
+        $("#logo").click(function(){
+            location.href="HOME.html";
+        })
+    </script>
+        <script>
+    
+            // <!-- 4. 스와이퍼 JS -->
+            const swiper = new Swiper('.swiper_a', {
+                // Optional parameters 
+                direction: 'horizontal', /* 수직, 수평 */
+                loop: true, /* 무한루프 */
+        
+                // If we need pagination
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true, /* 클릭 옵션 */
+                    type: 'bullet', /* 타입 */
+                },
+        
+                // Navigation arrows
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                }
+            });
+        
+        </script>
+</body>
+</html>

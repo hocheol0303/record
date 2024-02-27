@@ -1,0 +1,601 @@
+<!-- 현재 상영 영화 -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>현재상영영화</title>
+    <script src='js/jquery-3.6.0.min.js'></script>
+
+    <link rel="stylesheet" href="PRESENT.css">
+    <link rel="stylesheet" href="..//header/header.css">
+    
+    <!-- 1.스와이퍼 라이브러리 -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            //마우스 진입하는 경우
+            $(".gnb .m").mouseenter(function() {
+                $(this).addClass("on"); //클래스 추가
+                // $(this).find(".menu").css("display", "block");
+                $(this).find(".menu").slideDown();
+                // $(this).find(".menu").fadeIn();
+                // $(this).find(".menu").show();
+            });
+            //마우스 떠나는 경우
+            $(".gnb .m").mouseleave(function() {
+                $(this).removeClass("on"); //클래스 삭제
+                $(this).find(".menu").css("display", "none");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="wrap"><!-- 위쪽헤더 -->
+            <div class="top"><!-- margin:0 auto; -->
+                <div class="name">
+                    <h1 style="background : yellowgreen;"><a href="../HOME.html"><img src="https://www.lottecinema.co.kr/NLCHS/Content/images/common/logo_wht.png" alt="롯데시네마"></a></h1>
+                </div>
+                <ul class="top_left"><!-- 왼쪽 -->
+                    <li><a href="#"><span>페이스북</span></a></li>
+                    <li><a href="#"><span>유튜브</span></a></li>
+                    <li><a href="#"><span>인스타그램</span></a></li>
+                </ul>
+                <ul class="top_right"><!-- 오른쪽 -->
+                    <li><a href="#"><span>멤버십</span></a></li>
+                    <li><a href="#"><span>고객센터</span></a></li>
+                    <li><a href="#"><span>단체관람/대관문의</span></a></li>
+                    <li><a href="#"><span>로그인</span></a></li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="row_header">
+            <ul class="gnb">
+                <li class="m">
+                <a href="#">예매</a>
+                    <ul class="menu"><!-- position absolute -->
+                        <li><a href="#">예매하기</a></li>
+                        <li><a href="#">상영시간표</a></li>
+                        <li><a href="#">할인안내</a></li>
+                    </ul>
+                </li>
+                <li class="m">
+                <a href="#">영화</a>
+                    <ul class="menu">
+                        <li><a href="../HOME.html">홈</a></li>
+                        <li><a href="#">현재상영작</a></li>
+                        <li><a href="#">상영예정작</a></li>
+                        <li><a href="#">아르떼</a></li>
+                        <li><a href="#">국립극장</a></li>
+                    </ul>
+                </li>
+                <li class="m">
+                <a href="#">영화관</a>
+                    <ul class="menu">
+                        <li><a href="#">스페셜관</a></li>
+                        <li><a href="#">서울</a></li>
+                        <li><a href="#">경기/인천</a></li>
+                        <li><a href="#">충청/대전</a></li>
+                        <li><a href="#">전라/광주</a></li>
+                        <li><a href="#">경북/대구</a></li>
+                        <li><a href="#">경남/부산/울산</a></li>
+                        <li><a href="#">강원</a></li>
+                        <li><a href="#">제주</a></li>
+                    </ul>
+                </li>
+                <li class="m">
+                <a href="#">이벤트</a>
+                    <ul class="menu">
+                        <li><a href="#">홈</a></li>
+                        <li><a href="#">영화</a></li>
+                        <li><a href="#">시사회/무대인사</a></li>
+                        <li><a href="#">HOT</a></li>
+                        <li><a href="#">제휴할인</a></li>
+                        <li><a href="#">우리동네영화관</a></li>
+                    </ul>
+                </li>
+                <li class="m">
+                    <a href="#">스토어</a>
+                        <ul class="menu">
+                            <li><a href="#">베스트</a></li>
+                            <li><a href="#">관람권</a></li>
+                            <li><a href="#">스낵음료</a></li>
+                            <li><a href="#">포토카드</a></li>
+                        </ul>
+                    </li>
+                
+            </ul>
+    
+        </div>
+        </header>
+        
+        <div id="body">
+            <div id="bodyBody">
+                <div id="bodyHead">
+                    <div id="movie">
+                        <h1>현재상영영화</h1>
+                    </div>
+                </div>
+                <div id="bodyBottom">
+                    <ul class="movie">
+                        <!-- 탑건 -->
+                        <li><!-- 그림 -->
+                            <div style="margin-right:20px"><img src="img/1.jpg" alt="포스터" width="100" height="140">
+                            </div>
+                            <div>
+                                <div><img src="img/12세.png"><a href="../topgun.html" style="font-family: tahoma;">탑건: 매버릭</a></div>
+                                <div class="base">
+                                    <p>평점</p>
+                                    <div class="starBase">
+                                        <p class="star" id="star1"></p><!-- 별점그림 -->
+                                    </div>
+                                    <p class="evalue" style="font-size:25px; font-weight:bolder;">9.73</p>
+                                </div>
+                                <div class="gaeYo">개요 <p>2022.06.22</p>
+                                    <p>130분</p>
+                                </div>
+                                <div><!-- 인물 검색 -->
+                                    <div>
+                                        <p class="cc">감독</p><a class="character" href="#">조셉 코신스키</a>
+                                    </div>
+                                    <div>
+                                        <p class="cc">출연</p><a class="character" href="#">톰 크루즈</a>, <a
+                                            class="character" href="#">마일즈 텔러</a>, <a class="character" href="#">제니퍼 코넬리</a>
+                                    </div>
+                                </div>
+                                <div class="btns">
+                                    <div><a href="#" class="btn1 btn" style="width:77px; height: 26px;"></a></div>
+                                    <div class="extra">
+                                        <a href="#" class="btn2 btn" style="width:74px; height: 24px;"></a>
+                                        <a href="#" class="btn3 btn" style="width:75px; height: 24px;"></a>
+                                        <a href="#" class="btn4 btn" style="width:75px; height: 24px;"></a>
+                                        <a href="#" class="btn5 btn" style="width:75px; height: 24px;"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- et -->
+                        <li><!-- 그림 -->
+                            <div style="margin-right:20px"><img src="img/alienoid.jpg" alt="포스터" width="100" height="140">
+                            </div>
+                            <div>
+                                <div><img src="img/12세.png"><a href="../alienoid.html" style="font-family: tahoma;">외계 + 인</a></div>
+                                <div class="base">
+                                    <p>평점</p>
+                                    <div class="starBase">
+                                        <p class="star" id="star7"></p><!-- 별점그림 -->
+                                    </div>
+                                    <p class="evalue" style="font-size:25px; font-weight:bolder;">7.00</p>
+                                </div>
+                                <div class="gaeYo">개요 <p>2022.07.20</p>
+                                    <p>142분</p>
+                                </div>
+                                <div><!-- 인물 검색 -->
+                                    <div>
+                                        <p class="cc">감독</p><a class="character" href="#">최동훈</a>
+                                    </div>
+                                    <div>
+                                        <p class="cc">출연</p><a class="character" href="#">류준열</a>, <a class="character" href="#">김우빈</a>, <a class="character" href="#">김태리</a>, <a class="character" href="#">소지섭</a>
+                                    </div>
+                                </div>
+                                <div class="btns">
+                                    <div><a href="#" class="btn1 btn" style="width:77px; height: 26px;"></a></div>
+                                    <div class="extra">
+                                        <a href="#" class="btn2 btn" style="width:74px; height: 24px;"></a>
+                                        <a href="#" class="btn3 btn" style="width:75px; height: 24px;"></a>
+                                        <a href="#" class="btn4 btn" style="width:75px; height: 24px;"></a>
+                                        <a href="#" class="btn5 btn" style="width:75px; height: 24px;"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li><!-- 헤어질결심 -->
+                        <li><!-- 그림 -->
+                            <div style="margin-right:20px"><img src="img/DecisionToLeave.jpg" alt="포스터" width="100" height="140">
+                            </div>
+                            <div>
+                                <div><img src="img/15세.png"><a href="../DecisionToLeave.html" style="font-family: tahoma;">헤어질 결심</a></div>
+                                <div class="base">
+                                    <p>평점</p>
+                                    <div class="starBase">
+                                        <p class="star" id="star8"></p><!-- 별점그림 -->
+                                    </div>
+                                    <p class="evalue" style="font-size:25px; font-weight:bolder;">8.1</p>
+                                </div>
+                                <div class="gaeYo">개요 <p>2022.06.29</p>
+                                    <p>138분</p>
+                                </div>
+                                <div><!-- 인물 검색 -->
+                                    <div>
+                                        <p class="cc">감독</p><a class="character" href="#">박찬욱</a>
+                                    </div>
+                                    <div>
+                                        <p class="cc">출연</p><a class="character" href="#">탕웨이</a>, <a class="character" href="#">박해일</a>, <a class="character" href="#">이정현</a>
+                                    </div>
+                                </div>
+                                <div class="btns">
+                                    <div><a href="#" class="btn1 btn" style="width:77px; height: 26px;"></a></div>
+                                    <div class="extra">
+                                        <a href="#" class="btn2 btn" style="width:74px; height: 24px;"></a>
+                                        <a href="#" class="btn3 btn" style="width:75px; height: 24px;"></a>
+                                        <a href="#" class="btn4 btn" style="width:75px; height: 24px;"></a>
+                                        <a href="#" class="btn5 btn" style="width:75px; height: 24px;"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li><!-- 비상비상 -->
+                        <li><!-- 그림 -->
+                            <div style="margin-right:20px"><img src="img/emergency.jpg" alt="포스터" width="100" height="140">
+                            </div>
+                            <div>
+                                <div><img src="img/12세.png"><a href="../emergency.html" style="font-family: tahoma;">비상선언</a></div>
+                                <div class="base">
+                                    <p>평점</p>
+                                    <div class="starBase">
+                                        <p class="star" id="star9"></p><!-- 별점그림 -->
+                                    </div>
+                                    <p class="evalue" style="font-size:25px; font-weight:bolder;">9.4</p>
+                                </div>
+                                <div class="gaeYo">개요 <p>2022.08.03</p>
+                                    <p>147분</p>
+                                </div>
+                                <div><!-- 인물 검색 -->
+                                    <div>
+                                        <p class="cc">감독</p><a class="character" href="#">한재림</a>
+                                    </div>
+                                    <div>
+                                        <p class="cc">출연</p><a class="character" href="#">송강호</a>, <a class="character" href="#">이병헌</a>, <a class="character" href="#">전도연</a>
+                                    </div>
+                                </div>
+                                <div class="btns">
+                                    <div><a href="#" class="btn1 btn" style="width:77px; height: 26px;"></a></div>
+                                    <div class="extra">
+                                        <a href="#" class="btn2 btn" style="width:74px; height: 24px;"></a>
+                                        <a href="#" class="btn3 btn" style="width:75px; height: 24px;"></a>
+                                        <a href="#" class="btn4 btn" style="width:75px; height: 24px;"></a>
+                                        <a href="#" class="btn5 btn" style="width:75px; height: 24px;"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li><!-- hansan -->
+                        <li><!-- 그림 -->
+                            <div style="margin-right:20px"><img src="img/hansan.jpg" alt="포스터" width="100" height="140">
+                            </div>
+                            <div>
+                                <div><img src="img/12세.png"><a href="../hansan.html" style="font-family: tahoma;">한산:용의 출현</a></div>
+                                <div class="base">
+                                    <p>평점</p>
+                                    <div class="starBase">
+                                        <p class="star" id="star10"></p><!-- 별점그림 -->
+                                    </div>
+                                    <p class="evalue" style="font-size:25px; font-weight:bolder;">8.1</p>
+                                </div>
+                                <div class="gaeYo">개요 <p>2022.07.27</p>
+                                    <p>129분</p>
+                                </div>
+                                <div><!-- 인물 검색 -->
+                                    <div>
+                                        <p class="cc">감독</p><a class="character" href="#">김한민</a>
+                                    </div>
+                                    <div>
+                                        <p class="cc">출연</p><a class="character" href="#">박해일</a>, <a class="character" href="#">변요한</a>, <a class="character" href="#">안성기</a>
+                                    </div>
+                                </div>
+                                <div class="btns">
+                                    <div><a href="#" class="btn1 btn" style="width:77px; height: 26px;"></a></div>
+                                    <div class="extra">
+                                        <a href="#" class="btn2 btn" style="width:74px; height: 24px;"></a>
+                                        <a href="#" class="btn3 btn" style="width:75px; height: 24px;"></a>
+                                        <a href="#" class="btn4 btn" style="width:75px; height: 24px;"></a>
+                                        <a href="#" class="btn5 btn" style="width:75px; height: 24px;"></a>
+                                    </div>
+                                </div>
+                            </div><!-- minions -->
+                        </li><!-- 그림 -->
+                        <li>
+                            <div style="margin-right:20px"><img src="img/minions.jpg" alt="포스터" width="100" height="140"></div>
+                            <div>
+                                <div><img src="img/12세.png"><a href="../minions.html" style="font-family: tahoma;">미니언즈2</a></div>
+                                <div class="base">
+                                    <p>평점</p>
+                                    <div class="starBase">
+                                        <p class="star" id="star11"></p><!-- 별점그림 -->
+                                    </div>
+                                    <p class="evalue" style="font-size:25px; font-weight:bolder;">9.2</p>
+                                </div>
+                                <div class="gaeYo">개요 <p>2022.07.20</p>
+                                    <p>87분</p>
+                                </div>
+                                <div><!-- 인물 검색 -->
+                                    <div>
+                                        <p class="cc">감독</p><a class="character" href="#">카일 발다</a>
+                                    </div>
+                                    <div>
+                                        <p class="cc">출연</p><a class="character" href="#">스티브 카렐</a>, <a class="character" href="#">타라지 P.헨슨</a>, <a class="character" href="#">양자경</a>
+                                    </div>
+                                </div>
+                                <div class="btns">
+                                    <div><a href="#" class="btn1 btn" style="width:77px; height: 26px;"></a></div>
+                                    <div class="extra">
+                                        <a href="#" class="btn2 btn" style="width:74px; height: 24px;"></a>
+                                        <a href="#" class="btn3 btn" style="width:75px; height: 24px;"></a>
+                                        <a href="#" class="btn4 btn" style="width:75px; height: 24px;"></a>
+                                        <a href="#" class="btn5 btn" style="width:75px; height: 24px;"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li><!-- remember -->
+                        <li><!-- 그림 -->
+                            <div style="margin-right:20px"><img src="img/2.jpg" alt="포스터" width="100" height="140">
+                            </div>
+                            <div>
+                                <div><img src="img/12세.png"><a href="#" style="font-family: tahoma;">리멤버 미</a></div>
+                                <div class="base">
+                                    <p>평점</p>
+                                    <div class="starBase">
+                                        <p class="star" id="star2"></p><!-- 별점그림 -->
+                                    </div>
+                                    <p class="evalue" style="font-size:25px; font-weight:bolder;">5.50</p>
+                                </div>
+                                <div class="gaeYo">개요 <p>2022.06.29</p>
+                                    <p>94분</p>
+                                </div>
+                                <div><!-- 인물 검색 -->
+                                    <div>
+                                        <p class="cc">감독</p><a class="character" href="#">시미즈 에이지 한</a>
+                                    </div>
+                                    <div>
+                                        <p class="cc">출연</p><a class="character" href="#">새미 앤더슨</a>, <a class="character" href="#">재클린 팜퀴스트</a>, <a class="character" href="#">마이클사사키</a>, <a class="character" href="#">조엘 서튼</a>
+                                    </div>
+                                </div>
+                                <div class="btns">
+                                    <div><a href="#" class="btn1 btn" style="width:77px; height: 26px;"></a></div>
+                                    <div class="extra">
+                                        <a href="#" class="btn2 btn" style="width:74px; height: 24px;"></a>
+                                        <a href="#" class="btn3 btn" style="width:75px; height: 24px;"></a>
+                                        <a href="#" class="btn4 btn" style="width:75px; height: 24px;"></a>
+                                        <a href="#" class="btn5 btn" style="width:75px; height: 24px;"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li><!-- summer ! -->
+                        <li><!-- 그림 -->
+                            <div style="margin-right:20px"><img src="img/3.jpg" alt="포스터" width="100" height="140">
+                            </div>
+                            <div>
+                                <div><img src="img/전체.png"><a href="../summer.html" style="font-family: tahoma;">썸머 필름을 타고!</a></div>
+                                <div class="base">
+                                    <p>평점</p>
+                                    <div class="starBase">
+                                        <p class="star" id="star3"></p><!-- 별점그림 -->
+                                    </div>
+                                    <p class="evalue" style="font-size:25px; font-weight:bolder;">6.80</p>
+                                </div>
+                                <div class="gaeYo">개요 <p>2022.07.20</p>
+                                    <p>98분</p>
+                                </div>
+                                <div><!-- 인물 검색 -->
+                                    <div>
+                                        <p class="cc">감독</p><a class="character" href="#">마츠모토 소우시</a>
+                                    </div>
+                                    <div>
+                                        <p class="cc">출연</p><a class="character" href="#">이토 마리카</a>, <a class="character" href="#">카네코 다이치</a>, <a class="character" href="#">이노리 키라라</a>, <a class="character" href="#">카와이 유미</a>
+                                    </div>
+                                </div>
+                                <div class="btns">
+                                    <div><a href="#" class="btn1 btn" style="width:77px; height: 26px;"></a></div>
+                                    <div class="extra">
+                                        <a href="#" class="btn2 btn" style="width:74px; height: 24px;"></a>
+                                        <a href="#" class="btn3 btn" style="width:75px; height: 24px;"></a>
+                                        <a href="#" class="btn4 btn" style="width:75px; height: 24px;"></a>
+                                        <a href="#" class="btn5 btn" style="width:75px; height: 24px;"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li><!-- 코난 -->
+                        <li><!-- 그림 -->
+                            <div style="margin-right:20px"><img src="img/4.jpg" alt="포스터" width="100" height="140">
+                            </div>
+                            <div>
+                                <div><img src="img/12세.png"><a href="../conan.html" style="font-family: tahoma;">명탐정 코난: 할로윈의 신부</a></div>
+                                <div class="base">
+                                    <p>평점</p>
+                                    <div class="starBase">
+                                        <p class="star" id="star4"></p><!-- 별점그림 -->
+                                    </div>
+                                    <p class="evalue" style="font-size:25px; font-weight:bolder;">9.53</p>
+                                </div>
+                                <div class="gaeYo">개요 <p>2022.07.13</p>
+                                    <p>110분</p>
+                                </div>
+                                <div><!-- 인물 검색 -->
+                                    <div>
+                                        <p class="cc">감독</p><a class="character" href="#">마츠나카 스스무</a>
+                                    </div>
+                                </div>
+                                <div class="btns">
+                                    <div><a href="#" class="btn1 btn" style="width:77px; height: 26px;"></a></div>
+                                    <div class="extra">
+                                        <a href="#" class="btn2 btn" style="width:74px; height: 24px;"></a>
+                                        <a href="#" class="btn3 btn" style="width:75px; height: 24px;"></a>
+                                        <a href="#" class="btn4 btn" style="width:75px; height: 24px;"></a>
+                                        <a href="#" class="btn5 btn" style="width:75px; height: 24px;"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li><!-- 니얼굴 -->
+                            <!-- 그림 -->
+                            <div style="margin-right:20px"><img src="img/5.jpg" alt="포스터" width="100" height="140">
+                            </div>
+                            <div>
+                                <div><img src="img/전체.png"><a href="#" style="font-family: tahoma;">니 얼굴</a>
+                                </div>
+                                <div class="base">
+                                    <p>평점</p>
+                                    <div class="starBase">
+                                        <p class="star" id="star5"></p><!-- 별점그림 -->
+                                    </div>
+                                    <p class="evalue" style="font-size:25px; font-weight:bolder;">9.45</p>
+                                </div>
+                                <div class="gaeYo">개요 <p>2022.06.23</p>
+                                    <p>86분</p>
+                                </div>
+                                <div><!-- 인물 검색 -->
+                                    <div>
+                                        <p class="cc">감독</p><a class="character" href="#">서동일</a>
+                                    </div>
+                                    <div>
+                                        <p class="cc">출연</p><a class="character" href="#">정은혜</a>
+                                    </div>
+                                </div>
+                                <div class="btns">
+                                    <div><a href="#" class="btn1 btn" style="width:77px; height: 26px;"></a></div>
+                                    <div class="extra">
+                                        <a href="#" class="btn2 btn" style="width:74px; height: 24px;"></a>
+                                        <a href="#" class="btn3 btn" style="width:75px; height: 24px;"></a>
+                                        <a href="#" class="btn4 btn" style="width:75px; height: 24px;"></a>
+                                        <a href="#" class="btn5 btn" style="width:75px; height: 24px;"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li><!-- 범도2 -->
+                            <!-- 그림 -->
+                            <div style="margin-right:20px"><img src="img/6.jpg" alt="포스터" width="100" height="140">
+                            </div>
+                            <div>
+                                <div><img src="img/15세.png"><a href="#" style="font-family: tahoma;">범죄도시2</a>
+                                </div>
+                                <div class="base">
+                                    <p>평점</p>
+                                    <div class="starBase">
+                                        <p class="star" id="star6"></p><!-- 별점그림 -->
+                                    </div>
+                                    <p class="evalue" style="font-size:25px; font-weight:bolder;">9.42</p>
+                                </div>
+                                <div class="gaeYo">개요 <p>2022.05.18</p>
+                                    <p>106분</p>
+                                </div>
+                                <div><!-- 인물 검색 -->
+                                    <div>
+                                        <p class="cc">감독</p><a class="character" href="#">이상용</a>
+                                    </div>
+                                    <div>
+                                        <p class="cc">출연</p><a class="character" href="#">마동석</a>, <a class="character" href="#">손석구</a>, <a class="character" href="#">최귀화</a>
+                                    </div>
+                                </div>
+                                <div class="btns">
+                                    <div><a href="#" class="btn1 btn" style="width:77px; height: 26px;"></a></div>
+                                    <div class="extra">
+                                        <a href="#" class="btn2 btn" style="width:74px; height: 24px;"></a>
+                                        <a href="#" class="btn3 btn" style="width:75px; height: 24px;"></a>
+                                        <a href="#" class="btn4 btn" style="width:75px; height: 24px;"></a>
+                                        <a href="#" class="btn5 btn" style="width:75px; height: 24px;"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <div id="goToTop">
+                <a href="#"><img src="img/top.png" width="50" height="50" alt="위로"></a>
+            </div>
+
+        </div>
+    </div>
+        
+
+
+
+        <script>
+
+                    /* 스크롤 쫓아가기 */
+                $(document).ready(function(){
+                var currentPosition = parseInt($("#goToTop").css("top"));
+                $(window).scroll(function() {
+                    var position = $(window).scrollTop(); 
+                    $("#goToTop").stop().animate({"top":position+currentPosition+"px"},300);
+                });
+                });
+
+
+                $("#goToTop > a").click(function () {
+                    window.scrollTo(0, 0);
+                })
+                /* html값으로 검색하는 함수 */
+            $(".character").click(function () {
+                event.preventDefault();
+                location.href = "https://www.google.com/search?q=" + $(this).html()
+            });
+
+            $(".search>button").click(function () {
+                event.preventDefault();
+                location.href = "https://www.google.com/search?q=" + $(".search > input").val();
+                $(".search>input").val("");
+            });
+        </script>
+         <script>
+        
+            // <!-- 4. 스와이퍼 JS -->
+            const swiper = new Swiper('.swiper', {
+                // Optional parameters 
+                direction: 'horizontal', /* 수직, 수평 */
+                loop: true, /* 무한루프 */
+                
+                /* 자동재생 */
+                autoplay: {
+                    delay: 1800,
+                    /* pauseOnMouseEnter: true,  */
+                    disableOnInteraction: false, /* 상호작용후 자동재생 적용 */
+                },
+    
+                // If we need pagination
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true, /* 클릭 옵션 */
+                    type: 'fraction', /* 타입 */
+                },
+    
+                // Navigation arrows
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+    
+                // And if we need scrollbar
+               /* 
+                scrollbar: {
+                    el: '.swiper-scrollbar',
+                },
+                */
+    
+            });
+    
+            $(".name > h1 > img").click(function(){
+                        event.preventDefault();
+                        location.href = "../12프로젝트/합친거.html";
+                    });
+
+            $(".movie>li>div>img").mouseover(function(){
+                $(this).css("cursor","pointer");
+            })
+            $(".movie > li > div > img").click(function(){
+                event.preventDefault();
+                location.href = $(this).closest("div").next().find("a").attr("href");
+            })
+            
+        </script>
+</body>
+
+</html>

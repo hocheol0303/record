@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        p {
+            border: 1px solid #777;
+            width: 600px;
+            height: 100px;
+            /* padding: 10px; */                /* 전부 다 */
+            /* padding: 10px 20px; */           /* 위아래, 좌우 */
+            padding: 10px 20px 30px 40px;       /* 12시부터 시계방향 */
+        }
+
+        .box {
+            border: 1px solid #777;
+            width: 600px;
+            height: 100px;
+            /* 패딩과 사용방법이 같음 */
+            margin: 10px 20px 30px 40px;
+            /* margin: 0 auto; */   /* '박스' 중앙정렬 */
+        }
+
+        .inner {
+            border: 1px solid #777;
+            width: 600px;
+            height: 100px;
+            /* 너비가 지정된 상태에서 박스를 가운데로 배치 */
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+
+    <p>
+        패딩이란?
+        윤곽을 기준으로 안쪽여백입니다.<br>
+        박스너비: (width + border + padding)이당~
+    </p>
+
+    <div class="box">
+        마진이란?
+        윤곽을 기준으로 바깥여백입니다.<br>
+        박스높이: (width + border + padding)이당~
+    </div>
+
+    <div class="inner">
+        박스를 중앙 가운데로 배치
+    </div>
+</body>
+</html>

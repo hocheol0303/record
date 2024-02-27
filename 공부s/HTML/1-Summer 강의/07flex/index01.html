@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{background-color: yellow; padding:10px;}
+        .box .item {margin:10px; background-color: green; width:50px; height:50px;}
+        /* flex는 item을 감싸는 부모박스(container), 자식박스(item)으로 나누어집니다. */
+        /* flex는 block성질, inline-flex는 인라인배치하되 블럭의 성질을 갖게함. */
+        .container{
+            display:flex;
+            flex-direction: column;     /* column, column-reverse, row, row-reverse 있다. */
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container box"> <!-- 클래스 두 개 -->
+        <div class="item">hello</div>
+        <div class="item">world</div>
+        <div class="item">bye</div>
+    </div>
+    <div class="container box">
+        <div class="item">hello</div>
+        <div class="item">world</div>
+        <div class="item">bye</div>
+    </div>
+
+    <hr>
+
+    <h3>flex-wrap: 더이상 공간이 없을 때 item의 처리</h3>
+
+    <style>
+        .container2 {
+            display:flex;
+            /* wrap은 공간이 없다면 여러줄로 처리 */
+            flex-wrap: /* 기본값: nowrap: 한 줄로 쭉쭉 */wrap;
+        }
+    </style>
+
+<div class="container2 box">
+    <div class="item">hello</div>
+    <div class="item">world</div>
+    <div class="item">bye</div>
+</div>
+
+    <hr>
+
+    <h3>justify-content(메인축의 정렬방법)</h3>
+
+    <style>
+        .container3 {
+            display: flex;
+            flex-direction: row; /* 메인축 가로 정방향 */
+            justify-content:space-around;
+        }
+    </style>
+
+    <div class="container3 box">
+        <div class="item">hello</div>
+        <div class="item">world</div>
+        <div class="item">bye</div>
+    </div>
+    
+    <hr>
+    <h3>align-items(반대축정렬, 한줄일때)</h3>
+    
+    <style>
+        .container4{
+            display: flex;
+            align-items:baseline;/* item의 높이값이 없어야 확인가능 */  /* baseline: 문자를 기준으로 정렬 */
+            height: 200px;/* container의 높이가 있어야 확인가능 */
+        }
+        .container4 .item {height:auto;}
+    </style>
+    <div class="container4 box">
+        <div class="item" style="line-height:50px;">hello</div>
+        <div class="item">world</div>
+        <div class="item">bye</div>
+    </div>
+    
+    <hr>
+    <h3>align-content(두 줄 이상일 때 행단위 정렬)</h3>
+    <style>
+        .container5 {
+            display:flex;
+            flex-wrap:wrap;
+            height:300px;
+            align-content:space-between;
+        }
+    </style>
+
+    <div class="container5 box">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+        <div class="item">10</div>
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+        <div class="item">10</div>
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+        <div class="item">10</div>
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+        <div class="item">10</div>
+    </div>
+    
+</body>
+</html>

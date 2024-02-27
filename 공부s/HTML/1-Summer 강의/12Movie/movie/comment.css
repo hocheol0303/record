@@ -1,0 +1,103 @@
+*{padding:0; margin:0;}
+li, ul{list-style: none;}
+img{max-width: 100%; height: auto;}
+
+
+.topTop {
+    width:1100px;
+    margin:0 auto;
+}
+.topBotCont {
+    width:1100px; 
+    margin:0 auto;
+    text-align: center;
+}
+.middle, .bottom{
+    width:1100px;
+    margin:0 auto;
+}
+
+.topBot {
+    border-bottom:1px solid rgb(238, 238, 238);
+    border-top:1px solid rgb(230, 230, 230);
+}
+
+.parent {display: flex; flex-direction: row; justify-content: center;}
+.child {padding:20px 40px;}
+.child>a, .bottom>.tap>a{
+    text-decoration: none;
+    color:#000;
+    transition: 0.2s;
+    font-size: 20px;
+    font-weight:600;
+    letter-spacing: -3px;
+}
+.child>a:hover{color:red;}
+
+.topTop ul{overflow:hidden;}
+
+.topTopChild {float:left;}
+.topTopChild {padding-right:8px;}
+.topTop > ul > .text{padding:15px 5px;}
+.topTop > ul > .text a{text-decoration: none; color:rgb(163, 178, 190);}
+.topTop > ul > .login, .topTop > ul > .menu, .topTop>ul>.search {float:right;}
+.topTop>ul>.menu{margin-top:5px;}
+
+.topTop > ul > .login, .search {padding: 10px 15px;}
+.topTop > ul > .login > a {
+    display:inline-block; 
+    text-decoration: none; 
+    color:#000; 
+    border:1px solid rgb(231, 231, 231); 
+    font-size: 11px;
+    width:50px;
+    height:24px;
+    line-height: 24px;
+    text-align: center;
+}
+.krt {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 36px;
+    color: #000;
+}
+.engt{
+    font-size: 16px;
+    line-height: 19px;
+    color: #000; 
+}
+.title {width: 150px; font-size: 16px; color:#98989C}
+.tbCont {width: 200px; font-size: 16px; color:#000;}
+.middleTop > div > img {width:210px; height:308px;}
+
+.middleTop>div{margin-top: 60px;}
+
+table {
+    margin: 0 0 30px 50px;
+    line-height: 25px;
+}
+
+.bottom > .tap {border-bottom:1px solid #98989C; box-sizing: border-box; margin: 50px 0;}
+.bottom > .tap > a {display:inline-block; padding: 20px 40px;}
+
+.on{border-bottom:2.5px solid #000;}
+
+.botBot{overflow:hidden;}
+.botBot .botLeft{float:left; width:800px;}
+.botBot .botRight{float:right;}
+
+textarea {width:100%;}
+
+
+.gap {width:auto; height:100px; margin:150px}
+
+.commit {margin:30px auto; font-size:20px;}
+
+.commentCss{
+    /* 댓글 css  */
+    padding-bottom:10px; 
+    padding-top: 30px; 
+    border-top:1px solid rgb(163, 178, 190);
+}
+
+.hidden {display:none;}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- form태그는 사용자한테 입력받은 값을 서버측으로 전송할 때 사용한다. -->
+    <form action="https://www.naver.com">
+        이름: <input type="text" size="15" placeholder="이름은 4글자입니다" >   <!-- size: 글자수, placeholder: 희미한 글자 삽입--><br/>
+        비밀번호: <input type="password" size="20" placeholder="비밀번호는 10글자입니다."><br/>
+        <hr>
+
+        <!-- Checkbox, radio는 name속성으로 반드시 그룹화 시켜야 합니다. -->
+        관심분야<br/>
+        <input type="checkbox" name="intro">HTML
+        <input type="checkbox" name="intro">CSS
+        <input type="checkbox" name="intro">JavaScript
+        <input type="checkbox" name="intro">Jquery          <!-- 중복선택 가능 -->
+        <br/>
+        전공분야<br/>
+        <input type="radio" name="major" value="com"> 컴퓨터공학과
+        <input type="radio" name="major" value="med"> 미디어학과
+        <input type="radio" name="major" value="mac"> 기계공학과
+        <input type="radio" name="major" value="des"> 디자인학과        <!-- 중복선택 불가능 -->
+        
+        <br>
+        지역:<!-- name은 나중에 변수명, value는 실제 값이 됨 -->
+        <select name="area">
+            <option value="seoul">서울</option>             <!-- value는 전부 String으로 넘어감 -->
+            <option value="gyungGi">경기도</option>
+            <option value="daegu">대구</option>
+            <option value="busan">부산</option>
+        </select>
+
+        <br>자기소개<br>        <!--cols 열 크기, rows 행크기 id=태그 고유의 이름(화면에 중복되는 id 없어야함, CSS에서 매우중요) -->
+        <textarea name="" id="xxx" cols="30" rows="10"></textarea>     
+        <br>
+        <input type="file"><br>
+        <input type="reset" value="초기화버튼입니다.">
+        <input type="button" value="목록">
+        <!-- submit : form태그의 action의 위치로 데이터를 전송하는 역할 -->
+        <input type="submit" value="전송">
+        
+    </form>
+
+</body>
+</html>
