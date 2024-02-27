@@ -1,0 +1,80 @@
+ctrl + shift + ` : 새 터미널 열기
+ctrl + ` : 터미널 - 에디터 간 커서 이동
+
+- 컴퓨터에서 git 처음 쓸 때 등록하기
+    원하는 폴더 Shift + 우클릭 - power shell 열기
+    git config --global user.email "홍길동@xxx.com"
+    git config --global user.name "홍길동"
+
+- git에서 감시 시작 
+    terminal - new terminal -> git init 입력
+
+- 현재상태 기록
+    git add 파일명
+    git commit -m '메세지'
+
+
+추가추가룬
+
+기록을 놓고 '버전을 만든다'고 표현함
+add 여러개 해놓고 묶어서 commit 하는거지
+
+
+작업폴더 - staging area(add) - repository(commit)
+
+
+명령어를 리눅스 명령어 쓰듯이 쓰네
+
+git add ** ~~ ## ... : 여러개 add
+git add . : 현재 폴더 add
+
+git status : 상태창 - 어떤 파일들 스테이징(add) 해놨는지 알 수 있음
+
+git log --all --oneline : 내가 커밋한 내역 보여주세요.
+
+예전 내용 읽는 명령어 알려주세요
+
+나 C로 자료구조 해서 보라색으로 git 쓰고싶어요 VScode에 복붙하는 방법밖에 없음?
+
+우측 3번째 탭에서 git 기능 사용 가능
+
+git diff : 이전 커밋에서 어떤 수정사항이 있는지 확인 (j, k로 스크롤 바) - 잘 안씀
+git difftool : git diff 상위호환 (hjkl, :q, :qa 등)
+git difftool (commit_id) : 특정 커밋과 비교(2 개까지 가능)
+git history, git lens, git graph 등 extention 설치하면 더 나은 에디터로 git diff 가능 : 설치하면 git 메뉴 상단에 그림 뜸
+
+git branch (브랜치명) : 새로운 코드를 추가했는데 에러가 발생할 것을 생각하여 복사본에 새로운 코드를 추가해서 실행해보기 (최근 커밋의 복사본)
+git switch (브랜치명) : 브랜치로 이동 - git status 쓰면 브랜치 위치라고 알려줌
+git switch main : 메인 브랜치에 원본이 저장되어있다.
+git log --all --oneline --graph : 브랜치에 커밋한 내역 보여주세요
+
+기준이 되는 브랜치로 가서 git merge (브랜치명) : 서로 다른 파일을 수정했으면 상관없는데 같은 파일 같은 자리를 수정했을 경우 conflict 발생
+    - conflict 발생 시 알려주는데 원하는 부분만 남기고 저장 - git add - git commit 하면 됨
+
+git branch --list : 브랜치 뭐뭐 존재하는지 알려주세요 명령어
+
+git restore . : 변경사항 버리기
+git reset : add 취소
+git reset 경로 : 특정 파일 add 취소
+
+git remote add origin https://github.com/hocheol0303/git.git : 깃허브 hocheol0303의 git repository에 연결함
+git remote -v : 연결고리 확인?
+git push origin main : github의 main branch에 코드를 보낸다
+
+git revert commit_id : 커밋 삭제
+
+
+
+
+permission denied 해결법
+git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+ssh key가 깃허브에 등록되어있지 않아서 생기는 에러
+    ssh-keygen -t rsa -C "깃허브 계정 메일 주소"
+    엔터엔터 치면 기본값으로 저장 (경로 : ~/.ssh)
+    계정 settings의 ssh키에 cat id_rsa.pub 내용 입력
+

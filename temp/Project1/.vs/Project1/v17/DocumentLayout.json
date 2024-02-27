@@ -1,0 +1,70 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\hoche\\OneDrive\\Desktop\\\uC0C8 \uD3F4\uB354\\code\\temp\\Project1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4B3E3EB6-A5B8-4897-98E2-07855F0CDE49}|Project1\\Project1.vcxproj|C:\\Users\\hoche\\OneDrive\\Desktop\\\uC0C8 \uD3F4\uB354\\code\\temp\\Project1\\Project1\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{4B3E3EB6-A5B8-4897-98E2-07855F0CDE49}|Project1\\Project1.vcxproj|solutionrelative:Project1\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B3E3EB6-A5B8-4897-98E2-07855F0CDE49}|Project1\\Project1.vcxproj|C:\\Users\\hoche\\OneDrive\\Desktop\\\uC0C8 \uD3F4\uB354\\code\\temp\\Project1\\Project1\\functions.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{4B3E3EB6-A5B8-4897-98E2-07855F0CDE49}|Project1\\Project1.vcxproj|solutionrelative:Project1\\functions.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "main.c",
+              "DocumentMoniker": "C:\\Users\\hoche\\OneDrive\\Desktop\\\uC0C8 \uD3F4\uB354\\code\\temp\\Project1\\Project1\\main.c",
+              "RelativeDocumentMoniker": "Project1\\main.c",
+              "ToolTip": "C:\\Users\\hoche\\OneDrive\\Desktop\\\uC0C8 \uD3F4\uB354\\code\\temp\\Project1\\Project1\\main.c",
+              "RelativeToolTip": "Project1\\main.c",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAABdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2024-02-26T13:30:47.256Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "functions.c",
+              "DocumentMoniker": "C:\\Users\\hoche\\OneDrive\\Desktop\\\uC0C8 \uD3F4\uB354\\code\\temp\\Project1\\Project1\\functions.c",
+              "RelativeDocumentMoniker": "Project1\\functions.c",
+              "ToolTip": "C:\\Users\\hoche\\OneDrive\\Desktop\\\uC0C8 \uD3F4\uB354\\code\\temp\\Project1\\Project1\\functions.c",
+              "RelativeToolTip": "Project1\\functions.c",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2024-02-21T01:51:26.806Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
