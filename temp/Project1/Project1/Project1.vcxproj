@@ -136,6 +136,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="array_io.h" />
+    <ClInclude Include="Stack.h" />
     <ClInclude Include="structure_polynomial.h" />
     <ClInclude Include="temp.h" />
   </ItemGroup>

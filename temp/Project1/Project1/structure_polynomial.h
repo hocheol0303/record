@@ -20,7 +20,7 @@ void print_Poly(Polynomial p)
 }
 */
 
-//다항식 출력 문제 1-(3)
+//다항식 출력 업글 문제 1-(3)
 void print_Poly(Polynomial p) {
 	for (int i = p.degree-1; i > 0; i--) {		//0차항 존재하기 때문에 최고차항이 n이면 배열은 n-1까지
 		if (p.coef[i] != 0 && p.coef[i] != 1) printf("%d x^%d + ", p.coef[i], i);
@@ -118,6 +118,43 @@ SparsePoly read_spoly() {
 }
 
 //모르겠어요
+//뤼튼 답
 SparsePoly add_spoly(SparsePoly a, SparsePoly b) {
+	int i = a.nTerms - 1;
+	int j = b.nTerms - 1;
+	int k = 0;
+	Term t[MAX_TERMS] = { 0, };
 
+	while (i >= 0 && j >= 0) {
+		if (a.term[i].expon == b.term[j].expon) {
+			t[k].coeff = a.term[i].coeff + b.term[j].coeff;
+			t[k].expon = a.term[i].expon; // 또는 t[k].expon = b.term[j].expon;
+			i--; j--; k++;
+		}
+
+		////////////////////////////여기 못함
+		//각 term 내림차순 가정하고 차수 높은 놈꺼 내려가면서 타타타타
+		else if (a.term[i].expon > b.term[j].expon) {
+			t[k] = a.term[i];
+			i--; k++;
+		}
+		else {
+			t[k] = b.term[j];
+			j--; k++;
+		}
+	}
+
+	//다 훑기 전에 끝난거 줍기
+	while (i >= 0) {
+		t[k] = a.term[i];
+		i--; k++;
+	}
+
+	while (j >= 0) {
+		t[k] = b.term[j];
+		j--; k++;
+	}
+
+	SparsePoly result = { k, t };
+	return result;
 }
