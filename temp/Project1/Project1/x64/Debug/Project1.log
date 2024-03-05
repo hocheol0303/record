@@ -1,9 +1,37 @@
 ﻿  main.c
-  functions.c
-  코드를 생성하고 있습니다...
-C:\Users\hoche\OneDrive\Desktop\새 폴더\code\temp\Project1\Project1\main.c(11,2): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\hoche\OneDrive\Desktop\새 폴더\code\temp\Project1\Project1\functions.c(4,17): warning C4047: '초기화 중': 'int'의 간접 참조 수준이 'void *'과(와) 다릅니다.
-C:\Users\hoche\OneDrive\Desktop\새 폴더\code\temp\Project1\Project1\functions.c(8,6): warning C4101: 'i' :참조되지 않은 지역 변수입니다.
-C:\Users\hoche\OneDrive\Desktop\새 폴더\code\temp\Project1\Project1\functions.c(36,8): warning C4244: '함수': 'time_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\hoche\OneDrive\Desktop\새 폴더\code\temp\Project1\Project1\functions.c(45,15): warning C4047: '!=': 'int'의 간접 참조 수준이 'void *'과(와) 다릅니다.
+C:\Users\hoche\OneDrive\Desktop\새 폴더\code\temp\Project1\Project1\structure_polynomial.h(27,57): warning C4474: 'printf' : 서식 문자열에 전달된 인수가 너무 많습니다.
+  (소스 파일 'main.c'을(를) 컴파일하는 중)
+  C:\Users\hoche\OneDrive\Desktop\새 폴더\code\temp\Project1\Project1\structure_polynomial.h(27,57):
+  자리 표시자 및 해당 매개 변수에는 variadic 인수가 1개 필요하지만 2개가 제공되었습니다.
+  
+C:\Users\hoche\OneDrive\Desktop\새 폴더\code\temp\Project1\Project1\structure_polynomial.h(30,14): warning C4473: 'printf': 서식 문자열에 대한 인수가 충분하게 전달되지 않았습니다.
+  (소스 파일 'main.c'을(를) 컴파일하는 중)
+  C:\Users\hoche\OneDrive\Desktop\새 폴더\code\temp\Project1\Project1\structure_polynomial.h(30,14):
+  자리 표시자 및 해당 매개 변수에는 variadic 인수가 1개 필요하지만 0개가 제공되었습니다.
+  C:\Users\hoche\OneDrive\Desktop\새 폴더\code\temp\Project1\Project1\structure_polynomial.h(30,14):
+  누락된 variadic 인수 1이(가) 서식 문자열 '%d'에 필요합니다.
+  
+C:\Users\hoche\OneDrive\Desktop\새 폴더\code\temp\Project1\Project1\structure_polynomial.h(38,2): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  (소스 파일 'main.c'을(를) 컴파일하는 중)
+  
+C:\Users\hoche\OneDrive\Desktop\새 폴더\code\temp\Project1\Project1\structure_polynomial.h(45,3): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  (소스 파일 'main.c'을(를) 컴파일하는 중)
+  
+C:\Users\hoche\OneDrive\Desktop\새 폴더\code\temp\Project1\Project1\structure_polynomial.h(97,75): warning C4474: 'printf' : 서식 문자열에 전달된 인수가 너무 많습니다.
+  (소스 파일 'main.c'을(를) 컴파일하는 중)
+  C:\Users\hoche\OneDrive\Desktop\새 폴더\code\temp\Project1\Project1\structure_polynomial.h(97,75):
+  자리 표시자 및 해당 매개 변수에는 variadic 인수가 0개 필요하지만 2개가 제공되었습니다.
+  
+C:\Users\hoche\OneDrive\Desktop\새 폴더\code\temp\Project1\Project1\structure_polynomial.h(106,2): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  (소스 파일 'main.c'을(를) 컴파일하는 중)
+  
+C:\Users\hoche\OneDrive\Desktop\새 폴더\code\temp\Project1\Project1\structure_polynomial.h(112,3): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  (소스 파일 'main.c'을(를) 컴파일하는 중)
+  
+C:\Users\hoche\OneDrive\Desktop\새 폴더\code\temp\Project1\Project1\structure_polynomial.h(114,3): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  (소스 파일 'main.c'을(를) 컴파일하는 중)
+  
+C:\Users\hoche\OneDrive\Desktop\새 폴더\code\temp\Project1\Project1\main.c(9,7): warning C4101: 'pterm' :참조되지 않은 지역 변수입니다.
+C:\Users\hoche\OneDrive\Desktop\새 폴더\code\temp\Project1\Project1\structure_polynomial.h(122,1): warning C4716: 'add_spoly': 값을 반환해야 합니다.
+C:\Users\hoche\OneDrive\Desktop\새 폴더\code\temp\Project1\Project1\main.c(34,1): warning C4700: 초기화되지 않은 'p' 지역 변수를 사용했습니다.
   Project1.vcxproj -> C:\Users\hoche\OneDrive\Desktop\새 폴더\code\temp\Project1\x64\Debug\Project1.exe

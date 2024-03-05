@@ -1,8 +1,4 @@
-#include<stdio.h>
-#include<stdlib.h>
-#include<time.h>
-int arr[10] = { NULL, };
-
+/*
 //순차탐색
 int sequential_search(int list[], int n, int key) {
 	int i;
@@ -16,7 +12,7 @@ int sequential_search(int list[], int n, int key) {
 //이진탐색
 int binary_search(int list[], int n, int key) {
 	int i = n / 2;
-	while (1) 
+	while (1)
 	{
 		if (list[i] == key) return i;
 		if (list[i] > key)
@@ -53,7 +49,7 @@ void get_sorted_list(int list[])
 }
 
 //1~n 합 구하기
-int sum_algorithmC(int n) 
+int sum_algorithmC(int n)
 {
 	int tmp = 0;
 	for (int i = 1; i <= n; i++)
@@ -65,18 +61,4 @@ int sum_algorithmC(int n)
 	}
 	return tmp;
 }
-
-
-/*int main(void)
-{
-	clock_t start, finish;
-	start = clock();
-
-	printf("%d\n", sum_algorithmC(100000));
-
-	finish = clock();
-
-	printf("%lf\n", (double)(finish - start)/CLOCKS_PER_SEC);
-	return 0;
-	
-}*/
+*/
