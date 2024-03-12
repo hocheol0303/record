@@ -1,37 +1,11 @@
 ﻿  main.c
-C:\Users\hoche\OneDrive\Desktop\새 폴더\code\temp\Project1\Project1\structure_polynomial.h(27,57): warning C4474: 'printf' : 서식 문자열에 전달된 인수가 너무 많습니다.
-  (소스 파일 'main.c'을(를) 컴파일하는 중)
-  C:\Users\hoche\OneDrive\Desktop\새 폴더\code\temp\Project1\Project1\structure_polynomial.h(27,57):
-  자리 표시자 및 해당 매개 변수에는 variadic 인수가 1개 필요하지만 2개가 제공되었습니다.
-  
-C:\Users\hoche\OneDrive\Desktop\새 폴더\code\temp\Project1\Project1\structure_polynomial.h(30,14): warning C4473: 'printf': 서식 문자열에 대한 인수가 충분하게 전달되지 않았습니다.
-  (소스 파일 'main.c'을(를) 컴파일하는 중)
-  C:\Users\hoche\OneDrive\Desktop\새 폴더\code\temp\Project1\Project1\structure_polynomial.h(30,14):
-  자리 표시자 및 해당 매개 변수에는 variadic 인수가 1개 필요하지만 0개가 제공되었습니다.
-  C:\Users\hoche\OneDrive\Desktop\새 폴더\code\temp\Project1\Project1\structure_polynomial.h(30,14):
-  누락된 variadic 인수 1이(가) 서식 문자열 '%d'에 필요합니다.
-  
-C:\Users\hoche\OneDrive\Desktop\새 폴더\code\temp\Project1\Project1\structure_polynomial.h(38,2): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\hoche\OneDrive\Desktop\새 폴더\code\temp\Project1\Project1\Stack.h(22,6): warning C4013: 'is_full'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
   (소스 파일 'main.c'을(를) 컴파일하는 중)
   
-C:\Users\hoche\OneDrive\Desktop\새 폴더\code\temp\Project1\Project1\structure_polynomial.h(45,3): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\hoche\OneDrive\Desktop\새 폴더\code\temp\Project1\Project1\Stack.h(31,6): warning C4013: 'is_empty'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
   (소스 파일 'main.c'을(를) 컴파일하는 중)
   
-C:\Users\hoche\OneDrive\Desktop\새 폴더\code\temp\Project1\Project1\structure_polynomial.h(97,75): warning C4474: 'printf' : 서식 문자열에 전달된 인수가 너무 많습니다.
-  (소스 파일 'main.c'을(를) 컴파일하는 중)
-  C:\Users\hoche\OneDrive\Desktop\새 폴더\code\temp\Project1\Project1\structure_polynomial.h(97,75):
-  자리 표시자 및 해당 매개 변수에는 variadic 인수가 0개 필요하지만 2개가 제공되었습니다.
-  
-C:\Users\hoche\OneDrive\Desktop\새 폴더\code\temp\Project1\Project1\structure_polynomial.h(106,2): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\hoche\OneDrive\Desktop\새 폴더\code\temp\Project1\Project1\Stack.h(71,2): warning C4013: 'strcpy'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
   (소스 파일 'main.c'을(를) 컴파일하는 중)
   
-C:\Users\hoche\OneDrive\Desktop\새 폴더\code\temp\Project1\Project1\structure_polynomial.h(112,3): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  (소스 파일 'main.c'을(를) 컴파일하는 중)
-  
-C:\Users\hoche\OneDrive\Desktop\새 폴더\code\temp\Project1\Project1\structure_polynomial.h(114,3): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  (소스 파일 'main.c'을(를) 컴파일하는 중)
-  
-C:\Users\hoche\OneDrive\Desktop\새 폴더\code\temp\Project1\Project1\main.c(9,7): warning C4101: 'pterm' :참조되지 않은 지역 변수입니다.
-C:\Users\hoche\OneDrive\Desktop\새 폴더\code\temp\Project1\Project1\structure_polynomial.h(122,1): warning C4716: 'add_spoly': 값을 반환해야 합니다.
-C:\Users\hoche\OneDrive\Desktop\새 폴더\code\temp\Project1\Project1\main.c(34,1): warning C4700: 초기화되지 않은 'p' 지역 변수를 사용했습니다.
   Project1.vcxproj -> C:\Users\hoche\OneDrive\Desktop\새 폴더\code\temp\Project1\x64\Debug\Project1.exe
